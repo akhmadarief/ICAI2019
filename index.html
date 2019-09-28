@@ -56,8 +56,11 @@
     <![endif]-->
     <style>
         body  {
-            background-image: url("bg.jpg");
+            background: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-size: auto;
             background-color: #cccccc;
+            background-attachment: fixed;
         }
     </style>
 </head>
@@ -121,6 +124,18 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="region" required id="region" class="form-control" placeholder="State/Province/Region">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="zip" required id="zip" class="form-control" placeholder="Postal/Zip Code">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="country" required id="country" class="form-control" placeholder="Country">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="status" required id="status" class="form-control" placeholder="Status">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="reg_type" required id="reg_type" class="form-control" placeholder="Registration Type">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="zip" required id="zip" class="form-control" placeholder="Postal/Zip Code">
