@@ -79,8 +79,11 @@ $peserta = mysqli_fetch_assoc($query);
     <![endif]-->
     <style>
         body  {
-            background-image: url("bg.jpg");
+            background: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-size: auto;
             background-color: #cccccc;
+            background-attachment: fixed;
         }
     </style>
 </head>
