@@ -38,6 +38,16 @@
 	function confirm_reset() {
 		return confirm("Are you sure you want to reset all text?");
 	}
+	
+	function konfirmasi() {
+		var txt;
+		var r = confirm("Pastikan data sudah benar");
+		if (r == true) {
+			txt = "You pressed OK!";
+		} else {
+			event.preventDefault();
+		}
+	}
 	</script>
 
     <!--[if lt IE 9]>
@@ -119,7 +129,7 @@
                                     <input type="text" name="country" required id="country" class="form-control" placeholder="Country">
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
+                                    <button type="submit" value="SEND" id="submit" onclick="konfirmasi()" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
                                     <button type="reset" value="SEND" id="reset" onclick="return confirm_reset()" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
