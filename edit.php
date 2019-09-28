@@ -116,7 +116,7 @@ $peserta = mysqli_fetch_assoc($query);
                         <form id="update" class="row" name="update" action="update.php" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="id" required id="id" value="<?php echo $peserta['id']?>" class="form-control" placeholder="ID">
+                                    <input type="hidden" name="id" required id="id" value="<?php echo $peserta['id']?>" class="form-control" placeholder="ID">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="full_name" required id="full_name" value="<?php echo $peserta['full_name']?>" class="form-control" placeholder="Full Name">
