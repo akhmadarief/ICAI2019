@@ -1,5 +1,7 @@
 <?php
 
+header("Refresh:2; url=index.html");
+
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
 $degree = $_POST['degree'];
