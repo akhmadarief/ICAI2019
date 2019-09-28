@@ -124,7 +124,7 @@ if (!$query) {
 					<td>".$row['id']."</td>
 					<td>".$row['full_name']."</td>
 					<td>".$row['email']."</td>
-					<td><a href='edit.html?id=$row[id]'>Edit</a>
+					<td><a href='edit.php?id=$row[id]'>Edit</a>
 					<a href='ctk.php?id=$row[id]'>Cetak</a>
 					</td>
 				</tr>";
