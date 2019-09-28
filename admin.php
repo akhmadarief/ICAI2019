@@ -144,7 +144,7 @@ if (!$query) {
 								<td>".$row['no_mai']."</td>
 								<td>".$row['price']."</td>
 								<td><a href='edit.php?id=$row[id]'>Edit</a>
-								<a href='ctk.php?id=$row[id]'>Cetak</a>
+								<a href='cetak_cari.php?id=$row[id]'  target='_blank' rel='nofollow'>Cetak</a>
 								</td>
 							</tr>";
 					//	$no++;
