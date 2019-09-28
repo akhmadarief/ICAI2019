@@ -4,7 +4,7 @@ include("conf.php");
 
 if( !isset($_GET['id']) ){
 	// kalau tidak ada id di query string
-	header('Location: call.php');
+	header('Location: admin.php');
 }
 
 //ambil id dari query string
@@ -100,7 +100,7 @@ $peserta = mysqli_fetch_assoc($query);
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="active" href="admin.html">Admin</a></li>
+                        <li><a class="active" href="admin.php">Admin</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,11 +151,23 @@ $peserta = mysqli_fetch_assoc($query);
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="country" required id="country" value="<?php echo $peserta['country']?>" class="form-control" placeholder="Country">
                                 </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="status" required id="status" value="<?php echo $peserta['status']?>" class="form-control" placeholder="Status">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="reg_type" required id="reg_type" value="<?php echo $peserta['reg_type']?>" class="form-control" placeholder="Registration Type">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="no_mai" required id="no_mai" value="<?php echo $peserta['no_mai']?>" class="form-control" placeholder="No. Anggota MAI">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="price" required id="price" value="<?php echo $peserta['price']?>" class="form-control" placeholder="Biaya">
+                                </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
                                     <button type="submit" value="update" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Update</button>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <button type="reset" value="SEND" id="reset" onclick="return confirm_reset()" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
+                                    <button type="reset" value="reset" id="reset" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
                                 </div>
                             </fieldset>
                         </form>

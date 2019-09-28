@@ -1,6 +1,6 @@
 <?php
 
-header("Refresh:1; url=call.php");
+//header("Refresh:1; url=admin.php");
 
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
@@ -14,10 +14,10 @@ $city = $_POST['city'];
 $region = $_POST['region'];
 $zip = $_POST['zip'];
 $country = $_POST['country'];
-//$status = $_POST['status'];
-//$reg_type = $_POST['reg_type'];
-//$no_mai = $_POST['no_mai'];
-//$price = $_POST['price'];
+$status = $_POST['status'];
+$reg_type = $_POST['reg_type'];
+$no_mai = $_POST['no_mai'];
+$price = $_POST['price'];
 
 $host = "localhost";
 $dbUsername = "root";
@@ -37,7 +37,7 @@ if (mysqli_connect_error()){
 }
 
 else {
-  $sql = "UPDATE register SET full_name='$full_name', degree='$degree', inst='$inst', email='$email', no_phone='$no_phone', no_mobile='$no_mobile', st_address='$st_address', city='$city', region='$region', zip='$zip', country='$country' WHERE id='$id'";  //ini utama
+  $sql = "UPDATE register SET full_name='$full_name', degree='$degree', inst='$inst', email='$email', no_phone='$no_phone', no_mobile='$no_mobile', st_address='$st_address', city='$city', region='$region', zip='$zip', country='$country', status='$status', reg_type='$reg_type', no_mai='$no_mai', price='$price' WHERE id='$id'";  //ini utama
   $sql1 = "SELECT * FROM register";
 
   if ($conn->query($sql)){

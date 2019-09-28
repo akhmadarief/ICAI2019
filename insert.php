@@ -1,6 +1,6 @@
 <?php
 
-header("Refresh:1; url=index.html");
+//header("Refresh:1; url=index.html");
 
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
@@ -14,10 +14,10 @@ $city = $_POST['city'];
 $region = $_POST['region'];
 $zip = $_POST['zip'];
 $country = $_POST['country'];
-//$status = $_POST['status'];
-//$reg_type = $_POST['reg_type'];
-//$no_mai = $_POST['no_mai'];
-//$price = $_POST['price'];
+$status = $_POST['status'];
+$reg_type = $_POST['reg_type'];
+$no_mai = $_POST['no_mai'];
+$price = $_POST['price'];
 
 $host = "localhost";
 $dbUsername = "root";
