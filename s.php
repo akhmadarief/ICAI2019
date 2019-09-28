@@ -1,8 +1,8 @@
 <?php
  function cetak(&$id) {
 
-  $file = ('C:\xampp\htdocs\test\ICAI2019_2\Cetak\Kwitansi\kwitansi_'.$id.'.pdf'); 
-$filename = ('C:\xampp\htdocs\test\ICAI2019_2\Cetak\Kwitansi\kwitansi_'.$id.'.pdf'); 
+  $file = ('C:\xampp\htdocs\test\ICAI2019\Cetak\Kwitansi\kwitansi_'.$id.'.pdf'); 
+$filename = ('C:\xampp\htdocs\test\ICAI2019\Cetak\Kwitansi\kwitansi_'.$id.'.pdf'); 
   
 // Header content type 
 header('Content-type: application/pdf'); 
