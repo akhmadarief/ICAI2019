@@ -89,6 +89,15 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
  die();
 }
 */
+echo "<head>
+<script>
+
+    window.onload = function() {
+  window.open('cetak_cari.php?id=$id', '_blank');
+    }
+</script>
+</head>";
+echo "yooo";
 $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
   
   if (!empty($referer)) {
