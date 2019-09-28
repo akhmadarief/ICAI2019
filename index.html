@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
  
      <!-- Site Metas -->
-    <title>ICAI 2019 - Registration</title>  
+    <title>ICAI 2019 - Registration</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -33,6 +33,12 @@
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
+	
+	<script>
+	function confirm_reset() {
+		return confirm("Are you sure you want to reset all text?");
+	}
+	</script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -116,7 +122,7 @@
                                     <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
-                                        <button type="reset" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
+                                    <button type="reset" value="SEND" id="reset" onclick="return confirm_reset()" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
                                 </div>
                             </fieldset>
                         </form>
