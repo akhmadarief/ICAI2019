@@ -111,6 +111,7 @@ if (!$query) {
 				<th>ID</th>
 				<th>Nama</th>
 				<th>Email</th>
+				<th>Country</th>
 				<th>Opsi</th>
 			</tr>
 		</thead>
@@ -124,6 +125,7 @@ if (!$query) {
 					<td>".$row['id']."</td>
 					<td>".$row['full_name']."</td>
 					<td>".$row['email']."</td>
+					<td>".$row['country']."</td>
 					<td><a href='edit.php?id=$row[id]'>Edit</a>
 					<a href='ctk.php?id=$row[id]'>Cetak</a>
 					</td>
