@@ -53,6 +53,8 @@
     -------------------------------------------------------------------*/
 
     body {
+		overflow-y : auto;
+		overflow-x : auto;
         color: #333;
         font-size: 15px;
         font-family: 'Noto Sans', sans-serif;
@@ -651,7 +653,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
         display: block;
         position: relative;
 		height: auto;
-        overflow: hidden;
+        overflow: visible;
         padding: 150px 70px 0;
     }
 
