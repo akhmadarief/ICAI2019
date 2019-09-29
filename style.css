@@ -42,6 +42,11 @@
     @import url(css/prettyPhoto.css);
     @import url(css/owl.carousel.css);
     @import url(css/font-awesome.min.css);
+	
+	@font-face {
+	font-family: OpenSans-Regular;
+	src: url('fonts/OpenSans/OpenSans-Regular.ttf'); 
+	}
 
 /*------------------------------------------------------------------
     SKELETON
