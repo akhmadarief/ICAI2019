@@ -31,13 +31,13 @@ if (mysqli_connect_error()) {
 
 else {
      //$SELECT = "SELECT email From register Where email = ? Limit 1";
-if (mysqli_connect_error()){
-  die('Connect Error ('. mysqli_connect_errno() .') '
-    . mysqli_connect_error());
-}
+  if (mysqli_connect_error()){
+    die('Connect Error ('. mysqli_connect_errno() .') '
+      . mysqli_connect_error());
+  }
 
-else {
-  $sql = "INSERT INTO register (id, full_name, degree, inst, email, no_phone, no_mobile, st_address, city, region, zip, country, status, reg_type, no_mai, price)   
+  else {
+    $sql = "INSERT INTO register (id, full_name, degree, inst, email, no_phone, no_mobile, st_address, city, region, zip, country, status, reg_type, no_mai, price)   
   values ('$id','$full_name','$degree','$inst','$email','$no_phone','$no_mobile','$st_address','$city','$region','$zip','$country','$status','$reg_type','$no_mai','$price')";  //ini utama
   $sql1 = "SELECT * FROM register";
 
@@ -92,21 +92,21 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
 echo "<head>
 <script>
 
-    window.onload = function() {
+window.onload = function() {
   window.open('cetak_cari.php?id=$id', '_blank');
-    }
+}
 </script>
 </head>";
 echo "yooo";
 $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
+
+if (!empty($referer)) {
   
-  if (!empty($referer)) {
-    
-    echo '<p><a href="'. $referer .'" title="Return to the previous page">&laquo; Go back</a></p>';
-    
-  } else {
-    
-    echo '<p><a href="javascript:history.go(-1)" title="Return to the previous page">&laquo; Go back</a></p>';
-    
-  }
+  echo '<p><a href="'. $referer .'" title="Return to the previous page">&laquo; Go back</a></p>';
+  
+} else {
+  
+  echo '<p><a href="javascript:history.go(-1)" title="Return to the previous page">&laquo; Go back</a></p>';
+  
+}
 ?>

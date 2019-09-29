@@ -27,11 +27,11 @@ $peserta = mysqli_fetch_assoc($query);
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
+    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
-     <!-- Site Metas -->
+    
+    <!-- Site Metas -->
     <title>ICAI 2019 - Edit</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -56,36 +56,36 @@ $peserta = mysqli_fetch_assoc($query);
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
-	
-	<script>
-	function confirm_reset() {
-		return confirm("Are you sure you want to reset all text?");
-	}
-	
-	function konfirmasi() {
-		var txt;
-		var r = confirm("Pastikan data sudah benar");
-		if (r == true) {
-			txt = "You pressed OK!";
-		} else {
-			event.preventDefault();
-		}
-	}
-	</script>
+    
+    <script>
+       function confirm_reset() {
+          return confirm("Are you sure you want to reset all text?");
+      }
+      
+      function konfirmasi() {
+          var txt;
+          var r = confirm("Pastikan data sudah benar");
+          if (r == true) {
+             txt = "You pressed OK!";
+         } else {
+             event.preventDefault();
+         }
+     }
+ </script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        body  {
-            background: url("bg.jpg");
-            background-repeat: no-repeat;
-            background-size: auto;
-            background-color: #cccccc;
-            background-attachment: fixed;
-        }
-    </style>
+  <![endif]-->
+  <style>
+    body  {
+        background: url("bg.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-color: #cccccc;
+        background-attachment: fixed;
+    }
+</style>
 </head>
 <body class="realestate_version">
 
@@ -181,7 +181,7 @@ $peserta = mysqli_fetch_assoc($query);
     </div>
 
     
-        
+    
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
     <!-- ALL JS FILES -->
@@ -191,7 +191,7 @@ $peserta = mysqli_fetch_assoc($query);
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
-   <!-- MAP & CONTACT -->
+    <!-- MAP & CONTACT -->
     <script src="js/map.js"></script>
 
 </body>

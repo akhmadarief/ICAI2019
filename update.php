@@ -31,12 +31,12 @@ if (mysqli_connect_error()) {
 
 else {
      //$SELECT = "SELECT email From register Where email = ? Limit 1";
-if (mysqli_connect_error()){
-  die('Connect Error ('. mysqli_connect_errno() .') '
-    . mysqli_connect_error());
-}
+  if (mysqli_connect_error()){
+    die('Connect Error ('. mysqli_connect_errno() .') '
+      . mysqli_connect_error());
+  }
 
-else {
+  else {
   $sql = "UPDATE register SET full_name='$full_name', degree='$degree', inst='$inst', email='$email', no_phone='$no_phone', no_mobile='$no_mobile', st_address='$st_address', city='$city', region='$region', zip='$zip', country='$country', status='$status', reg_type='$reg_type', no_mai='$no_mai', price='$price' WHERE id='$id'";  //ini utama
   $sql1 = "SELECT * FROM register";
 
@@ -89,14 +89,14 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
 }
 */
 $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
+
+if (!empty($referer)) {
   
-  if (!empty($referer)) {
-    
-    echo '<p><a href="'. $referer .'" title="Return to the previous page">&laquo; Go back</a></p>';
-    
-  } else {
-    
-    echo '<p><a href="javascript:history.go(-1)" title="Return to the previous page">&laquo; Go back</a></p>';
-    
-  }
+  echo '<p><a href="'. $referer .'" title="Return to the previous page">&laquo; Go back</a></p>';
+  
+} else {
+  
+  echo '<p><a href="javascript:history.go(-1)" title="Return to the previous page">&laquo; Go back</a></p>';
+  
+}
 ?>
