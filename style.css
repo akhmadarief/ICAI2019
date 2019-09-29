@@ -2727,7 +2727,9 @@ table * {
 }
 table td, table th {
   padding-left: 30px; /*8px;*/
-  padding-right: 30px
+  padding-right: 30px;
+  white-space: nowrap;
+
 }
 table thead tr {
   height: 60px;
