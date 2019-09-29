@@ -10,7 +10,7 @@ if (!$conn) {
 }
 
 $sql = 'SELECT * 
-		FROM register';
+		FROM register order by t_d';
 		
 $query = mysqli_query($conn, $sql);
 
@@ -118,6 +118,7 @@ if (!$query) {
                           <th scope="col">Registration Type</th>
                           <th scope="col">No. MAI</th>
                           <th scope="col">Total Cost</th>
+                          <th scope="col">Tanggal</th>
                           <th scope="col">Opsi</th>
                         </tr>
                       </thead>
@@ -143,6 +144,7 @@ if (!$query) {
 								<td>".$row['reg_type']."</td>
 								<td>".$row['no_mai']."</td>
 								<td>".$row['price']."</td>
+								<td>".$row['t_d']."</td>
 								<td><a href='edit.php?id=$row[id]'>Edit</a>
 								<a href='cetak_cari.php?id=$row[id]'  target='_blank' rel='nofollow'>Cetak</a>
 								</td>
