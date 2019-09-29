@@ -10,7 +10,7 @@ $db_user = 'root'; // User Server
 $db_pass = ''; // Password Server
 $db_name = 'yo'; // Nama Database
 $id = $_GET['id'];
-$full_name = $row['full_name'];
+//$full_name = $row['full_name'];
 echo $id;
 
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
@@ -30,7 +30,7 @@ if (!$query) {
 
 //Mengganti kata dalam Word
 $row = mysqli_fetch_array($query);
-$full_name = $row['full_name'];
+//$full_name = $row['full_name'];
 echo $full_name;
 
 
@@ -42,7 +42,7 @@ $phpWord = new \PhpOffice\PhpWord\PhpWord();
 $template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
 $template->setValue('tanggal', $cd);
 $template->setValue('ID', $id);
-$template->setValue('full_name', $full_name);
+$template->setValue('full_name', $row['full_name']);
 $template->saveAs('result.docx');
 //include 's.php';
 
@@ -67,24 +67,5 @@ $word = new COM("Word.Application") or die ("Could not initialise Object.");
 
 echo '<a href="s.php" target="_new">Continue to next page</a>'
 
-//Membaca PDF
-  /*
-  $file = ('C:\xampp\htdocs\test\ICAI2019_2\Cetak\Kwitansi\kwitansi_'.$id.'.pdf'); 
-$filename = ('C:\xampp\htdocs\test\ICAI2019_2\Cetak\Kwitansi\kwitansi_'.$id.'.pdf'); 
-  
-// Header content type 
-header('Content-type: application/pdf'); 
-  
-header('Content-Disposition: inline; filename="' . $filename . '"'); 
-  
-header('Content-Transfer-Encoding: binary'); 
-  
-header('Accept-Ranges: bytes'); 
-  
-// Read the file 
-@readfile($file); 
 
-//ini buat cetak
-echo '<body onload="window.print()">';
-*/
  ?>
