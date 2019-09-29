@@ -647,7 +647,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
         position: relative;
 		height: auto;
         overflow: hidden;
-        padding: 70px 0;
+        padding: 150px 70px 0;
     }
 
     .noover {
