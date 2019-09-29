@@ -21,10 +21,10 @@ if (!$conn) {
 }
 
 $sql = "SELECT * FROM register";
-$query = mysqli_query($conn, $sql)
+$query = mysqli_query($conn, $sql);
 
 
-while($row = mysqli_fetch_array($query))
+while ($row = mysqli_fetch_array($query))
 {
   $id = $row['id'];
   $full_name = $row['full_name'];
