@@ -17,16 +17,16 @@
 </body>
 <link rel="stylesheet" href="style.css">
   <div>
-    <form action="../admin.php" method="POST">
+    <form action="c.php" method="POST">
         <h1 style="text-align:center">Login</h1>
         <a class="navbar-brand" href="Admin.html"><img src="img/logoicai.png" alt="image" align="aligncenter"></a>
         <p>
             <label>Username:</label>
-            <input id="input" type="text" name="username" placeholder="username" />
+            <input type="text" name="un" required id="un" placeholder="User Name">
         </p>
         <p>
             <label>Password:</label>
-            <input id="input" type="password" name="password" placeholder="password" />
+            <input type="password" name="pw" required id="pw" placeholder="Password">
         </p>
         <p>
             <label><input type="checkbox" name="remember" value="remember" /> Remember me</label>
