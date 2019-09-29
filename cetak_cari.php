@@ -43,6 +43,8 @@ $template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
 $template->setValue('tanggal', $cd);
 $template->setValue('ID', $id);
 $template->setValue('full_name', $row['full_name']);
+$template->setValue('reg_type', $row['reg_type']);
+$template->setValue('price', $row['price']);
 $template->saveAs('result.docx');
 //include 's.php';
 
