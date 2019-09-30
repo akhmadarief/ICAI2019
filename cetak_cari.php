@@ -11,7 +11,7 @@ $db_pass = ''; // Password Server
 $db_name = 'yo'; // Nama Database
 $id = $_GET['id'];
 //$full_name = $row['full_name'];
-echo $id;
+//echo $id;
 
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 if (!$conn) {
@@ -31,12 +31,21 @@ if (!$query) {
 //Mengganti kata dalam Word
 $row = mysqli_fetch_array($query);
 //$full_name = $row['full_name'];
-echo $full_name;
+//echo $full_name;
 
 
 $cd = date("d-m-Y");
-echo "Today is " .$cd;
-echo "nama: " .$full_name;
+//echo "Today is " .$cd;
+//echo "nama: " .$full_name;
+$full_name = $row['full_name'];
+$tanggal = $cd;
+$id = $_GET['id'];
+$reg_type = $row['reg_type'];
+$price = $row['price'];
+$inst =  $row['inst'];
+
+include 'i.php';
+
 
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
 $template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
@@ -45,11 +54,12 @@ $template->setValue('ID', $id);
 $template->setValue('full_name', $row['full_name']);
 $template->setValue('reg_type', $row['reg_type']);
 $template->setValue('price', $row['price']);
-$template->saveAs('result.docx');
+$template->setValue('inst', $row['inst']);
+$template->saveAs('Cetak\kwitansi'.$id.'_'.$full_name.'.docx');
 //include 's.php';
 
 //Membuat PDF dari Word
-
+/*
 $word = new COM("Word.Application") or die ("Could not initialise Object.");
   // set it to 1 to see the MS Word window (the actual opening of the document)
 $word->Visible = 0;
@@ -68,6 +78,6 @@ unset($word);
 cetak($id);
 
 echo '<a href="s.php" target="_new">Continue to next page</a>'
-
+*/
 
 ?>
