@@ -89,7 +89,10 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
  die();
 }
 */
-echo "<head>
+
+/*
+echo 
+"<head>
 <script>
 
 window.onload = function() {
@@ -97,6 +100,7 @@ window.onload = function() {
 }
 </script>
 </head>";
+*/
 echo "yooo";
 $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
 
