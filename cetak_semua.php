@@ -49,11 +49,11 @@ while ($row = mysqli_fetch_array($query))
   // recommend to set to 0, disables alerts like "Do you want MS Word to be the default .. etc"
   $word->DisplayAlerts = 0;
   // open the word 2007-2013 document 
-  $word->Documents->Open('C:\xampp\htdocs\test\ICAI2019\result.docx');
+  $word->Documents->Open('C:\xampp\htdocs\ICAI2019\result.docx');
   // save it as word 2003
-  $word->ActiveDocument->SaveAs('C:\xampp\htdocs\test\ICAI2019\Cetak\Kwitansi\kwitansi_'.$id.'.doc');
+  $word->ActiveDocument->SaveAs('C:\xampp\htdocs\ICAI2019\Cetak\Kwitansi\kwitansi_'.$id.'.doc');
   // convert word 2007-2013 to PDF
-  $word->ActiveDocument->ExportAsFixedFormat('C:\xampp\htdocs\test\ICAI2019\Cetak\Kwitansi\kwitansi_'.$id.'.pdf', 17, false, 0, 0, 0, 0, 7, true, true, 2, true, true, false);
+  $word->ActiveDocument->ExportAsFixedFormat('C:\xampp\htdocs\ICAI2019\Cetak\Kwitansi\kwitansi_'.$id.'.pdf', 17, false, 0, 0, 0, 0, 7, true, true, 2, true, true, false);
   // quit the Word process
   $word->Quit(false);
   // clean up
