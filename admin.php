@@ -72,7 +72,7 @@ if (!$query) {
       <nav class="megamenu navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="index.html"><img src="images/logos/logoicai.png" alt="image"></a>
+            <a class="navbar-brand" ><img src="images/logos/logoicai.png" alt="image"></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <nav id="breadcrumbs">
