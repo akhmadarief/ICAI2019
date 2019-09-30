@@ -101,6 +101,7 @@ if (!$query) {
                 <table class="table100">
                   <thead>
                     <tr class="table100-head">
+                      <th scope="col">Option</th>
                       <th scope="col">ID</th>
                       <th scope="col">Full Name</th>
                       <th scope="col">Degree</th>
@@ -118,7 +119,6 @@ if (!$query) {
                       <th scope="col">No. MAI</th>
                       <th scope="col">Total Cost</th>
                       <th scope="col">Tanggal</th>
-                      <th scope="col">Opsi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -127,6 +127,9 @@ if (!$query) {
                    while ($row = mysqli_fetch_array($query))
                    {
                     echo "<tr>
+                    <td><a href='edit.php?id=$row[id]'>Edit</a> |
+                    <a href='bayar.php?id=$row[id]' target='_blank' rel='nofollow'>Bayar</a> |
+                    <a href='cetak_cari.php?id=$row[id]' target='_blank' rel='nofollow'>Cetak</a></td>
                     <td>".$row['id']."</td>
                     <td>".$row['full_name']."</td>
                     <td>".$row['degree']."</td>
@@ -144,9 +147,6 @@ if (!$query) {
                     <td>".$row['no_mai']."</td>
                     <td>".$row['price']."</td>
                     <td>".$row['t_d']."</td>
-                    <td><a href='edit.php?id=$row[id]'>Edit</a>
-                    <a href='cetak_cari.php?id=$row[id]'  target='_blank' rel='nofollow'>Cetak</a>
-                    </td>
                     </tr>";
 					//	$no++;
                   }?>
