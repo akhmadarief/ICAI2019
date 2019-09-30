@@ -97,8 +97,8 @@ if (!$query) {
     <div id="support" class="section wb">
       <div class="container">
         <div class="section-title text-center">
-          <h3>Request for Contact</h3>
-          <p class="lead">Let us give you more details about the special offer website you want us. Please fill out the form below. <br>We have million of website owners who happy to work with us!</p>
+          <h3>ICAI 2019 Participant Data</h3>
+          <p class="lead">This is ICAI 2019 participant data, as an admin we are very grateful if you can use it wisely, thanks!</p>
         </div><!-- end title -->
         <div class="row">
           <div class="container-table100">
