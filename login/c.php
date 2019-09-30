@@ -11,7 +11,7 @@ if ($un == "admin" && $pw == "admin")
 else 
 {
 	echo "gagal";
-	header('Location: ../admin/login.html');
+	header('Location: ../login/');
 }
 
 
