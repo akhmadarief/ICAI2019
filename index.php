@@ -171,7 +171,7 @@ $member = mysqli_fetch_assoc($query);
                                     <input type="text" name="zip" required id="zip" class="form-control" placeholder="Postal/Zip Code">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="country" required id="country" value="Indonesia" class="form-control" placeholder="Country">
+                                    <input type="text" name="country" required id="country" class="form-control" placeholder="Country">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <input type="hidden" name="status" required id="status" value="Anggota" placeholder="Status">
