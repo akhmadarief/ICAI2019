@@ -157,7 +157,7 @@ $member = mysqli_fetch_assoc($query);
                                     <input type="text" name="no_mobile" required id="no_mobile" value="<?php echo $member['nomor_handphone']?>" class="form-control" placeholder="Mobile">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="st_address" required id="st_address" value="<?php echo $member['alamat_rumah_jalan']?>" class="form-control" placeholder="Street Address">
+                                    <textarea input type="text" name="st_address" required id="st_address" value="<?php echo $member['alamat_rumah_jalan']?>" class="form-control" placeholder="Street Address"></textarea>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="city" required id="city" value="<?php echo $member['idwilayah_kecamatan_rumah']?>" class="form-control" placeholder="City">

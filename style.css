@@ -42,10 +42,10 @@
     @import url(css/prettyPhoto.css);
     @import url(css/owl.carousel.css);
     @import url(css/font-awesome.min.css);
-	
+
 	@font-face {
 	font-family: OpenSans-Regular;
-	src: url('fonts/OpenSans/OpenSans-Regular.ttf'); 
+	src: url('fonts/OpenSans/OpenSans-Regular.ttf');
 	}
 
 /*------------------------------------------------------------------
@@ -652,7 +652,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
     .section {
         display: block;
         position: relative;
-		height: auto;
+		    height: auto;
         overflow: visible;
         padding: 150px 70px 0;
     }
@@ -1426,7 +1426,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
 
 .post-media {
     position: relative;
-    border: 8px solid #eba834;	
+    border: 8px solid #eba834;
 }
 
 .post-media img {
@@ -1589,7 +1589,7 @@ hr.invis1 {
 
 
 .single-services{
-	
+
 }
 
 .single-services-img{
@@ -2658,7 +2658,7 @@ hr.invis1 {
 .support-info .info-title i{
 	display: block;
 	font-size: 28px;
-	color: #ffffff;	
+	color: #ffffff;
 	background: #eba834;
 	width: 48px;
 	height: 48px;
@@ -2896,42 +2896,3 @@ tbody tr:hover {
     padding-right: 15px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
