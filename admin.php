@@ -9,9 +9,7 @@ if (!$conn) {
 	die ('Gagal terhubung dengan MySQL: ' . mysqli_connect_error());	
 }
 
-$sql = 'SELECT * 
-FROM register order by t_d';
-
+$sql = 'SELECT * FROM register';
 $query = mysqli_query($conn, $sql);
 
 if (!$query) {
@@ -83,7 +81,7 @@ if (!$query) {
           <div id="navbar" class="navbar-collapse collapse">
             <nav id="breadcrumbs">
               <ul>
-                <li><a href="index.html">Offline Form</a></li>
+                <li><a href="index.php">Offline Form</a></li>
                 <li>Admin</li>
               </ul>
             </nav>
@@ -130,34 +128,33 @@ if (!$query) {
                   </thead>
                   <tbody>
                    <?php
-					//$no 	= 1;
-                   while ($row = mysqli_fetch_array($query))
-                   {
-                    echo "<tr>
-                    <td><a href='edit.php?id=$row[id]'>Edit</a> |
-                    <a href='bayar.php?id=$row[id]' target='_blank' rel='nofollow'  >Bayar</a> |
-                    <a href='cetak_cari.php?id=$row[id]' target='_blank' rel='nofollow'	>Cetak</a></td>
-                    <td>".$row['bayar']."</td>
-                    <td>".$row['id']."</td>
-                    <td>".$row['full_name']."</td>
-                    <td>".$row['degree']."</td>
-                    <td>".$row['inst']."</td>
-                    <td>".$row['email']."</td>
-                    <td>".$row['no_phone']."</td>
-                    <td>".$row['no_mobile']."</td>
-                    <td>".$row['st_address']."</td>
-                    <td>".$row['city']."</td>
-                    <td>".$row['region']."</td>
-                    <td>".$row['zip']."</td>
-                    <td>".$row['country']."</td>
-                    <td>".$row['status']."</td>
-                    <td>".$row['reg_type']."</td>
-                    <td>".$row['no_mai']."</td>
-                    <td>".$row['price']."</td>
-                    <td>".$row['t_d']."</td>
-                    </tr>";
-					//	$no++;
-                  }?>
+					while ($row = mysqli_fetch_array($query))
+					{
+						echo "<tr>
+						<td><a href='edit.php?id=$row[id]'>Edit</a> |
+						<a href='bayar.php?id=$row[id]' target='_blank' rel='nofollow' >Bayar</a> |
+						<a href='cetak_cari.php?id=$row[id]' target='_blank' rel='nofollow'	>Cetak</a></td>
+						<td>".$row['bayar']."</td>
+						<td>".$row['id']."</td>
+						<td>".$row['full_name']."</td>
+						<td>".$row['degree']."</td>
+						<td>".$row['inst']."</td>
+						<td>".$row['email']."</td>
+						<td>".$row['no_phone']."</td>
+						<td>".$row['no_mobile']."</td>
+						<td>".$row['st_address']."</td>
+						<td>".$row['city']."</td>
+						<td>".$row['region']."</td>
+						<td>".$row['zip']."</td>
+						<td>".$row['country']."</td>
+						<td>".$row['status']."</td>
+						<td>".$row['reg_type']."</td>
+						<td>".$row['no_mai']."</td>
+						<td>".$row['price']."</td>
+						<td>".$row['t_d']."</td>
+						</tr>";
+					}
+					?>
                 </tbody>
               </table>       
             </div>
