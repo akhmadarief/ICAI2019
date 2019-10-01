@@ -22,7 +22,16 @@ if( !isset($_GET['nomor_anggota']) ){
 // buat query untuk ambil data dari database
 $query = mysqli_query($db, "SELECT * FROM daftar_keanggotaan WHERE nomor_anggota='$nomor_anggota'");
 $member = mysqli_fetch_assoc($query);
+/*
+if($nomor_anggota==false){
+    echo implode($member);
+}
 
+else{
+	echo "<script>alert('No. Anggota MAI not found');</script>";
+    //header('Location: index.php'); //tolong bikin popup jquery
+}
+*/
 
 // jika data yang di-edit tidak ditemukan
 //if( mysqli_num_rows($query) < 1 ){
