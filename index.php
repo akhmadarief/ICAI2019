@@ -10,13 +10,16 @@ $db = mysqli_connect($server, $user, $password, $db_name);
 if( !$db ){
     die("Gagal terhubung dengan database: " . mysqli_connect_error());
 }
-//if( !isset($_GET['nomor_anggota']) ){
-	// kalau tidak ada id di query string
-//	header("Location: x/member_reg.php/'$peserta[nomor_anggota]'");}
-
+if( !isset($_GET['nomor_anggota']) ){
+		error_reporting(0);
+		// kalau tidak ada id di query string
+		//header("Location: x/member_reg.php/'$peserta[nomor_anggota]'");
+	}
+	else{
+		$nomor_anggota = $_GET['nomor_anggota'];
+	}
 
 //ambil id dari query string
-$nomor_anggota = $_GET['nomor_anggota'];
 
 // buat query untuk ambil data dari database
 $query = mysqli_query($db, "SELECT * FROM daftar_keanggotaan WHERE nomor_anggota='$nomor_anggota'");
