@@ -108,6 +108,7 @@ if (!$query) {
                   <thead>
                     <tr class="table100-head">
                       <th scope="col">Option</th>
+                      <th scope="col">Status Bayar</th>
                       <th scope="col">ID</th>
                       <th scope="col">Full Name</th>
                       <th scope="col">Degree</th>
@@ -134,8 +135,9 @@ if (!$query) {
                    {
                     echo "<tr>
                     <td><a href='edit.php?id=$row[id]'>Edit</a> |
-                    <a href='bayar.php?id=$row[id]' target='_blank' rel='nofollow'>Bayar</a> |
-                    <a href='cetak_cari.php?id=$row[id]' target='_blank' rel='nofollow'>Cetak</a></td>
+                    <a href='bayar.php?id=$row[id]'>Bayar</a> |
+                    <a href='cetak_cari.php?id=$row[id]' target='_blank' rel='nofollow'	>Cetak</a></td>
+                    <td>".$row['bayar']."</td>
                     <td>".$row['id']."</td>
                     <td>".$row['full_name']."</td>
                     <td>".$row['degree']."</td>
