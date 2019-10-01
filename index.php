@@ -125,10 +125,10 @@ $member = mysqli_fetch_assoc($query);
                         <h3><i class="fa fa-envelope-o grd1 global-radius"></i> REGISTRATION FORM</h3>
                         <form id="member_edit" class="row" name="member" action="index.php" method="get">
                             <fieldset class="row-fluid">
-                                <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
                                     <input type="sumbit" name="nomor_anggota" required id="nomor_anggota" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="No. Angota MAI (Member Only)">
                                 </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 text-center">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                                     <button type="submit" value="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Check</button>
                                 </div>
                             </fieldset>
