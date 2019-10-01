@@ -17,6 +17,10 @@
 		if($query->num_rows == 0){
 			echo "<script>alert('No. Anggota MAI not found');</script>";
 		}
+		else{
+			$status='Anggota';
+		}
+		
 	}
 	
 ?>
@@ -128,54 +132,54 @@
                         <form id="member_reg" class="row" name="member_reg" action="insert.php" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="hidden" name="no_mai" required id="no_mai" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="Full Name">
+                                    <input type="hidden" name="no_mai" required id="no_mai" value="<?php echo $member['nomor_anggota']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <label>Full Name:</label>
-                                    <input type="text" name="full_name" required id="full_name" value="<?php echo $member['nama_anggota']?>" class="form-control" placeholder="Full Name">
+                                    <input type="text" name="full_name" required id="full_name" value="<?php echo $member['nama_anggota']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <label>Degree:</label>
-                                    <input type="text" name="degree" required id="degree" class="form-control" placeholder="Degree">
+                                    <input type="text" name="degree" required id="degree" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <label>Institution:</label>
-                                    <input type="text" name="inst" required id="inst" class="form-control" placeholder="Institution">
+                                    <input type="text" name="inst" required id="inst" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <label>Email:</label>
-                                    <input type="text" name="email" required id="email" value="<?php echo $member['email_rumah']?>" class="form-control" placeholder="Mailing Address">
+                                    <input type="text" name="email" required id="email" value="<?php echo $member['email_rumah']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <label>Phone:</label>
-                                    <input type="text" name="no_phone" required id="no_phone" class="form-control" placeholder="Phone">
+                                    <input type="text" name="no_phone" required id="no_phone" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <label>Mobile:</label>
-                                    <input type="text" name="no_mobile" required id="no_mobile" value="<?php echo $member['nomor_handphone']?>" class="form-control" placeholder="Mobile">
+                                    <input type="text" name="no_mobile" required id="no_mobile" value="<?php echo $member['nomor_handphone']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <label>Street Address:</label>
-                                    <textarea input type="text" name="st_address" required id="st_address" value="<?php echo $member['alamat_rumah_jalan']?>" class="form-control" placeholder="Street Address"></textarea>
+                                    <textarea type="text" name="st_address" required id="st_address" value="<?php echo $member['alamat_rumah_jalan']?>" class="form-control"></textarea>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <label>City:</label>
-                                    <input type="text" name="city" required id="city" value="<?php echo $member['idwilayah_kecamatan_rumah']?>" class="form-control" placeholder="City">
+                                    <input type="text" name="city" required id="city" value="<?php echo $member['idwilayah_kecamatan_rumah']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Region:</label>
-                                    <input type="text" name="region" required id="region" value="<?php echo $member['prov']?>" class="form-control" placeholder="State/Province/Region">
+                                    <label>State/Province/Region:</label>
+                                    <input type="text" name="region" required id="region" value="<?php echo $member['prov']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <label>Postal/Zip Code:</label>
-                                    <input type="text" name="zip" required id="zip" class="form-control" placeholder="Postal/Zip Code">
+                                    <input type="text" name="zip" required id="zip" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <label>Country:</label>
-                                    <input type="text" name="country" required id="country" class="form-control" placeholder="Country">
+                                    <input type="text" name="country" required id="country" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="hidden" name="status" required id="status" value="Anggota" placeholder="Status">
+                                    <input type="hidden" name="status" required id="status" value="<?php echo $status?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <div class="custom-control custom-radio">  <!--Additional paper : 50 USD apa ini??????? -->
