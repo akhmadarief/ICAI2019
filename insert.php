@@ -15,9 +15,14 @@ $region = $_POST['region'];
 $zip = $_POST['zip'];
 $country = $_POST['country'];
 $status = $_POST['status'];
-$reg_type = $_POST['reg_type'];
+//$reg_type = $_POST['reg_type'];
 $no_mai = $_POST['no_mai'];
-$price = $_POST['price'];
+//$price = $_POST['price'];
+$o = $_POST['type_reg'];
+
+
+
+
 
 $host = "localhost";
 $dbUsername = "root";
@@ -37,6 +42,23 @@ else {
   }
 
   else {
+
+    $sql = "SELECT * 
+    FROM jenis where type_reg='$o'";
+
+    $query = mysqli_query($conn, $sql);
+
+    if (!$query) {
+      die ('SQL Error: ' . mysqli_error($conn));
+    }
+
+    $row = mysqli_fetch_array($query);
+    $reg_type = $row['regist_type'];
+    echo $reg_type;
+    $price = $row['price'];
+    echo $price;
+
+
     $sql = "INSERT INTO register (id, full_name, degree, inst, email, no_phone, no_mobile, st_address, city, region, zip, country, status, reg_type, no_mai, price)   
   values ('$id','$full_name','$degree','$inst','$email','$no_phone','$no_mobile','$st_address','$city','$region','$zip','$country','$status','$reg_type','$no_mai','$price')";  //ini utama
   $sql1 = "SELECT * FROM register";
@@ -90,17 +112,7 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
 }
 */
 
-/*
-echo 
-"<head>
-<script>
 
-window.onload = function() {
-  window.open('cetak_cari.php?id=$id', '_blank');
-}
-</script>
-</head>";
-*/
 echo "yooo";
 $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
 
