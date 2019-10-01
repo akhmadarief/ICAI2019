@@ -1,6 +1,6 @@
 <?php
 
-header("Refresh:1; url=admin.php");
+//header("Refresh:1; url=admin.php");
 
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
@@ -15,9 +15,10 @@ $region = $_POST['region'];
 $zip = $_POST['zip'];
 $country = $_POST['country'];
 $status = $_POST['status'];
-$reg_type = $_POST['reg_type'];
+//$reg_type = $_POST['reg_type'];
 $no_mai = $_POST['no_mai'];
-$price = $_POST['price'];
+//$price = $_POST['price'];
+$o = $_POST['type_reg'];
 
 $host = "localhost";
 $dbUsername = "root";
@@ -37,6 +38,24 @@ else {
   }
 
   else {
+
+     $sql = "SELECT * 
+    FROM jenis where type_reg='$o'";
+
+    $query = mysqli_query($conn, $sql);
+
+    if (!$query) {
+      die ('SQL Error: ' . mysqli_error($conn));
+    }
+
+    $row = mysqli_fetch_array($query);
+    $reg_type = $row['regist_type'];
+    echo $reg_type;
+    $price = $row['price'];
+    echo $price;
+
+
+
   $sql = "UPDATE register SET full_name='$full_name', degree='$degree', inst='$inst', email='$email', no_phone='$no_phone', no_mobile='$no_mobile', st_address='$st_address', city='$city', region='$region', zip='$zip', country='$country', status='$status', reg_type='$reg_type', no_mai='$no_mai', price='$price' WHERE id='$id'";  //ini utama
   $sql1 = "SELECT * FROM register";
 
