@@ -160,7 +160,7 @@
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Street Address:</p>
-                                    <textarea type="text" name="st_address" required id="st_address" value="<?php echo $member['alamat_rumah_jalan']?>" class="form-control"></textarea>
+                                    <textarea type="text" name="st_address" required id="st_address" class="form-control"><?php echo $member['alamat_rumah_jalan']?></textarea>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>City:</p>
