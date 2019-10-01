@@ -3,7 +3,7 @@
 //header("Refresh:1; url=index.html");
 
 $no_mai = $_POST['no_mai'];
-//$id = $_POST['id'];
+$id = $_POST['id'];
 $full_name = $_POST['full_name'];
 $degree = $_POST['degree'];
 $inst = $_POST['inst'];
@@ -19,7 +19,7 @@ $status = $_POST['status'];
 //$reg_type = $_POST['reg_type'];
 $no_mai = $_POST['no_mai'];
 //$price = $_POST['price'];
-$reg_id = $_POST['type_reg'];
+$o = $_POST['type_reg'];
 
 $host = "localhost";
 $dbUsername = "root";
@@ -41,7 +41,7 @@ else {
   else {
 
     $sql = "SELECT * 
-    FROM jenis where type_reg='$reg_type'";
+    FROM jenis where type_reg='$o'";
 
     $query = mysqli_query($conn, $sql);
 
@@ -56,8 +56,8 @@ else {
     echo $price;
 
 
-    $sql = "INSERT INTO register (full_name, degree, inst, email, no_phone, no_mobile, st_address, city, region, zip, country, status, reg_type, no_mai, price)   
-  values ('$full_name','$degree','$inst','$email','$no_phone','$no_mobile','$st_address','$city','$region','$zip','$country','$status','$reg_type','$no_mai','$price')";  //ini utama
+    $sql = "INSERT INTO register (id, full_name, degree, inst, email, no_phone, no_mobile, st_address, city, region, zip, country, status, reg_type, no_mai, price)   
+  values ('$id','$full_name','$degree','$inst','$email','$no_phone','$no_mobile','$st_address','$city','$region','$zip','$country','$status','$reg_type','$no_mai','$price')";  //ini utama
   $sql1 = "SELECT * FROM register";
 
   if ($conn->query($sql)){
