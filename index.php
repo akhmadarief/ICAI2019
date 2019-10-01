@@ -122,7 +122,7 @@ $member = mysqli_fetch_assoc($query);
                 <div class="col-md-6 wow slideInLeft hidden-xs hidden-sm">
                     <div class="contact_form">
                         <h3><i class="fa fa-envelope-o grd1 global-radius"></i> REGISTRATION FORM (MEMBER ONLY)</h3>
-                        <form id="member_edit" class="row" name="member" action="member.php" method="get">
+                        <form id="member_edit" class="row" name="member" action="index.php" method="get">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <input type="sumbit" name="nomor_anggota" required id="nomor_anggota" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="No. Angota MAI">
@@ -135,7 +135,7 @@ $member = mysqli_fetch_assoc($query);
                     </div>
 					
                     <div class="contact_form">
-                        <form id="member_reg" class="row" name="member_reg" action="member_reg.php" method="post">
+                        <form id="member_reg" class="row" name="member_reg" action="insert.php" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <input type="hidden" name="no_mai" required id="no_mai" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="Full Name">
