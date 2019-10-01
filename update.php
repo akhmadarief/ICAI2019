@@ -1,6 +1,6 @@
 <?php
 
-//header("Refresh:1; url=admin.php");
+header("Refresh:1; url=admin.php");
 
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
