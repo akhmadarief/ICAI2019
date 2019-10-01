@@ -135,7 +135,7 @@ if (!$query) {
                    {
                     echo "<tr>
                     <td><a href='edit.php?id=$row[id]'>Edit</a> |
-                    <a href='bayar.php?id=$row[id]'>Bayar</a> |
+                    <a href='bayar.php?id=$row[id]' target='_blank' rel='nofollow'  >Bayar</a> |
                     <a href='cetak_cari.php?id=$row[id]' target='_blank' rel='nofollow'	>Cetak</a></td>
                     <td>".$row['bayar']."</td>
                     <td>".$row['id']."</td>

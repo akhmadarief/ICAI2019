@@ -24,7 +24,9 @@ else {
   $sql1 = "SELECT * FROM register";
 
   if ($conn->query($sql)){
-    echo "New record is updated sucessfully";
+    //echo "New record is updated sucessfully";
+    include 'cetak_cari.php';
+    
   }
   else{
     echo "Error: ". $sql ."
@@ -71,6 +73,7 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
  die();
 }
 */
+/*
 $referer = filter_var($_SERVER['HTTP_REFERER'], FILTER_VALIDATE_URL);
 
 if (!empty($referer)) {
@@ -84,5 +87,5 @@ if (!empty($referer)) {
 }
 
 header('Location: ' . $_SERVER['HTTP_REFERER']);
-
+*/
 ?>
