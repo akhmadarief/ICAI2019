@@ -12,14 +12,12 @@ if( !$db ){
 }
 if( !isset($_GET['nomor_anggota']) ){
 		error_reporting(0);
-		// kalau tidak ada id di query string
-		//header("Location: x/member_reg.php/'$peserta[nomor_anggota]'");
 	}
 	else{
+		//ambil id dari query string
 		$nomor_anggota = $_GET['nomor_anggota'];
 	}
 
-//ambil id dari query string
 
 // buat query untuk ambil data dari database
 $query = mysqli_query($db, "SELECT * FROM daftar_keanggotaan WHERE nomor_anggota='$nomor_anggota'");
@@ -42,7 +40,7 @@ $member = mysqli_fetch_assoc($query);
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Site Metas -->
-    <title>ICAI 2019 - Registration (Member)</title>
+    <title>ICAI 2019 - Registration Form</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -124,20 +122,17 @@ $member = mysqli_fetch_assoc($query);
             <div class="row">
                 <div class="col-md-6 wow slideInLeft hidden-xs hidden-sm">
                     <div class="contact_form">
-                        <h3><i class="fa fa-envelope-o grd1 global-radius"></i> REGISTRATION FORM (MEMBER ONLY)</h3>
+                        <h3><i class="fa fa-envelope-o grd1 global-radius"></i> REGISTRATION FORM</h3>
                         <form id="member_edit" class="row" name="member" action="index.php" method="get">
                             <fieldset class="row-fluid">
-                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="sumbit" name="nomor_anggota" required id="nomor_anggota" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="No. Angota MAI">
+                                <div class="col-lg-9 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="sumbit" name="nomor_anggota" required id="nomor_anggota" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="No. Angota MAI (Member Only)">
                                 </div>
-                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12 text-center">
-                                    <button type="submit" value="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Search</button>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 text-center">
+                                    <button type="submit" value="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Check</button>
                                 </div>
                             </fieldset>
                         </form>
-                    </div>
-
-                    <div class="contact_form">
                         <form id="member_reg" class="row" name="member_reg" action="insert.php" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
