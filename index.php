@@ -135,47 +135,47 @@
                                     <input type="hidden" name="no_mai" required id="no_mai" value="<?php echo $member['nomor_anggota']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Full Name:</label>
+                                    <p>Full Name:</p>
                                     <input type="text" name="full_name" required id="full_name" value="<?php echo $member['nama_anggota']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Degree:</label>
+                                    <p>Degree:</p>
                                     <input type="text" name="degree" required id="degree" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Institution:</label>
+                                    <p>Institution:</p>
                                     <input type="text" name="inst" required id="inst" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Email:</label>
+                                    <p>Email:</p>
                                     <input type="text" name="email" required id="email" value="<?php echo $member['email_rumah']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Phone:</label>
+                                    <p>Phone:</p>
                                     <input type="text" name="no_phone" required id="no_phone" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Mobile:</label>
+                                    <p>Mobile:</p>
                                     <input type="text" name="no_mobile" required id="no_mobile" value="<?php echo $member['nomor_handphone']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Street Address:</label>
+                                    <p>Street Address:</p>
                                     <textarea type="text" name="st_address" required id="st_address" value="<?php echo $member['alamat_rumah_jalan']?>" class="form-control"></textarea>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>City:</label>
+                                    <p>City:</p>
                                     <input type="text" name="city" required id="city" value="<?php echo $member['idwilayah_kecamatan_rumah']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>State/Province/Region:</label>
+                                    <p>State/Province/Region:</p>
                                     <input type="text" name="region" required id="region" value="<?php echo $member['prov']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Postal/Zip Code:</label>
+                                    <p>Postal/Zip Code:</p>
                                     <input type="text" name="zip" required id="zip" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Country:</label>
+                                    <p>Country:</p>
                                     <input type="text" name="country" required id="country" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
