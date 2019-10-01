@@ -176,6 +176,48 @@ $member = mysqli_fetch_assoc($query);
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <input type="hidden" name="status" required id="status" value="Anggota" placeholder="Status">
                                 </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="custom-control custom-radio">  <!--Additional paper : 50 USD apa ini??????? -->
+                                        <div id="reg_type" style="font-size:16px;">
+                                            <label style="padding:-30px; font-size:20px">Registration Type for Indonesia</label>
+                                            <br><input type="radio" class="custom-control-input" value="1" name="type_reg">
+                                            <label class="custom-control-label" for="presenter_student">Presenter student : 1.500.000 IDR</label>
+                                            <br><input type="radio" class="custom-control-input" value="2" name="type_reg">
+                                            <label class="custom-control-label" for="presenter_reguler">Presenter reguler : 2.000.000 IDR</label>
+                                            <br><input type="radio" class="custom-control-input" value="3" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked3">Presenter MAI Member : 1.500.000 IDR</label>
+                                            <br><input type="radio" class="custom-control-input" value="4" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked4">Participant student : 1.500.000 IDR</label>
+                                            <br><input type="radio" class="custom-control-input" value="5" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked5">Participant reguler : 2.000.000 IDR</label>
+                                            <br><input type="radio" class="custom-control-input" value="6" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked6">Participant MAI Member : 1.500.000 IDR</label>
+                                            <br><input type="radio" class="custom-control-input" value="7" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked7">Additional paper : 750.000 IDR</label></br>
+                                            <br><label style="padding:-30px; font-size:20px">Registration Type for International</label>
+                                            <br><input type="radio" class="custom-control-input" value="8" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked8">Presenter student : 170 USD</label>
+                                            <br><input type="radio" class="custom-control-input" value="9" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked9">Presenter reguler : 250 USD</label>
+                                            <br><input type="radio" class="custom-control-input" value="10" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked10">Presenter WAS Member : 200 USD</label>
+                                            <br><input type="radio" class="custom-control-input" value="11" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked11">Participant student : 170 USD</label>
+                                            <br><input type="radio" class="custom-control-input" value="12" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked12">Participant reguler : 250 USD</label>
+                                            <br><input type="radio" class="custom-control-input" value="13" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked13">Participant WAS Member : 200 USD</label>
+                                            <br><input type="radio" class="custom-control-input" value="14" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked14">Additional paper : 50 USD</label></br>
+                                            <br><label style="padding:-30px; font-size:20px">Registration Special for Business Session (October, 5)</label>
+                                            <br><input type="radio" class="custom-control-input" value="15" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked15">Participant Member MAI : 500.000 IDR</label>
+                                            <br><input type="radio" class="custom-control-input" value="16" name="type_reg">
+                                            <label class="custom-control-label" for="defaultUnchecked16">Participant Non Member : 750.000 IDR</label></br>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
                                     <button type="submit" value="update" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
                                 </div>
