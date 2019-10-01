@@ -1,6 +1,6 @@
 <?php
 
-//header("Refresh:1; url=index.html");
+header("Refresh:1; url=index.php");
 
 $no_mai = $_POST['no_mai'];
 //$id = $_POST['id'];
