@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $server = "localhost";
 $user = "root";
@@ -36,11 +36,11 @@ $member = mysqli_fetch_assoc($query);
 <head>
     <!-- Basic -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <!-- Site Metas -->
     <title>ICAI 2019 - Registration (Member)</title>
     <meta name="keywords" content="">
@@ -65,12 +65,12 @@ $member = mysqli_fetch_assoc($query);
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
-    
+
     <script>
-       function confirm_reset() {
-          return confirm("Are you sure you want to reset all text?");
+      function confirm_reset() {
+          document.getElementById("contactform1").reset();
       }
-      
+
       function konfirmasi() {
           var txt;
           var r = confirm("Pastikan data sudah benar");
@@ -136,7 +136,7 @@ $member = mysqli_fetch_assoc($query);
                             </fieldset>
                         </form>
                     </div>
-					
+
                     <div class="contact_form">
                         <form id="member_reg" class="row" name="member_reg" action="insert.php" method="post">
                             <fieldset class="row-fluid">
@@ -225,10 +225,23 @@ $member = mysqli_fetch_assoc($query);
                                     <button type="submit" value="update" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <button type="reset" value="reset" id="reset" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
+                                    <button type="button" data-toggle="modal" data-target="#resetModal" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
                                 </div>
                             </fieldset>
                         </form>
+                    </div>
+                    <div class="modal fade" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-body" style="font-size:16px;">
+                              Are you sure to reset all data?
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                              <button type="button" onclick="confirm_reset()" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,7 +255,7 @@ $member = mysqli_fetch_assoc($query);
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/portfolio.js"></script>
-    <script src="js/hoverdir.js"></script>    
+    <script src="js/hoverdir.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
     <!-- MAP & CONTACT -->
     <script src="js/map.js"></script>
