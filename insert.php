@@ -20,6 +20,7 @@ $status = $_POST['status'];
 $no_mai = $_POST['no_mai'];
 //$price = $_POST['price'];
 $reg_id = $_POST['type_reg'];
+$o = $_POST['type_reg'];
 
 $host = "localhost";
 $dbUsername = "root";
@@ -41,7 +42,7 @@ else {
   else {
 
     $sql = "SELECT * 
-    FROM jenis where type_reg='$reg_type'";
+    FROM jenis where type_reg='$o'";
 
     $query = mysqli_query($conn, $sql);
 
