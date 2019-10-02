@@ -16,7 +16,7 @@ $region = $_POST['region'];
 $zip = $_POST['zip'];
 $country = $_POST['country'];
 $status = $_POST['status'];
-$no_mai = $_POST['no_mai'];
+//$no_mai = $_POST['no_mai'];
 
 $type_reg = $_POST['type_reg'];
 $query = mysqli_query($conn, "SELECT * FROM jenis where type_reg='$type_reg'");

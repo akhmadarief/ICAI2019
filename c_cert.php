@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML>
 <HEAD>
+	<body onload="window.print()">
 	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<META http-equiv="X-UA-Compatible" content="IE=8">
 	<TITLE>bcl_1112498766.htm</TITLE>

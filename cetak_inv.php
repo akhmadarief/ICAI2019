@@ -39,7 +39,7 @@ $country=$row['country'];
 include 'c_inv.php';
 
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
-$template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
+$template = new \PhpOffice\PhpWord\TemplateProcessor('berkas\invoice.docx');
 $template->setValue('tanggal', $cd);
 $template->setValue('ID', $id);
 $template->setValue('full_name', $row['full_name']);

@@ -39,14 +39,14 @@ $country=$row['country'];
 include 'c_cert.php';
 
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
-$template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
+$template = new \PhpOffice\PhpWord\TemplateProcessor('berkas\cert.docx');
 $template->setValue('tanggal', $cd);
 $template->setValue('ID', $id);
 $template->setValue('full_name', $row['full_name']);
 $template->setValue('reg_type', $row['reg_type']);
 $template->setValue('price', $row['price']);
 $template->setValue('inst', $row['inst']);
-$template->saveAs('Cetak\inv_'.$id.'_'.$full_name.'.docx');
+$template->saveAs('Cetak\cert_'.$id.'_'.$full_name.'.docx');
 //include 's.php';
 
 //Membuat PDF dari Word
