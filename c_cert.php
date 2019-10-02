@@ -22,16 +22,16 @@
 	margin-top: -100px;
 	position: absolute;
 	text-align: center;
-	top: 62%;
+	top: 65%;
 	width: 100%;
 }
 
-.ft0{font: bold 38px 'Arial';line-height: 32px;}
-.ft1{font: 25px 'Arial';line-height: 18px;}
+.ft0{font: bold 27px 'Arial';line-height: 32px;}
+.ft1{font: 16px 'Arial';line-height: 18px;}
 
 .p0{text-align: center;margin-top: 0px;margin-bottom: 0px;}
-.p1{text-align: center;padding-left: 0px;margin-top: 30px;margin-bottom: 0px;}
-.p2{text-align: center;margin-top: 23px;margin-bottom: 0px;}
+.p1{text-align: center;padding-left: 0px;margin-top: 20px;margin-bottom: 0px;}
+.p2{text-align: center;margin-top: 10px;margin-bottom: 0px;}
 
 
 
