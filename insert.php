@@ -1,6 +1,6 @@
 <?php
 
-//header("Refresh:1; url=index.php");
+header("Refresh:2; url=index.php");
 include("conf.php");
 
 $no_mai = $_POST['no_mai'];
