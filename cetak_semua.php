@@ -1,48 +1,75 @@
 <?php
-//Untuk memanggil modul
+
 require_once 'bootstrap.php';
 require_once 'vendor/autoload.php';
-require_once 's.php';
-set_time_limit(500);
-//Koneksi Database
+//require_once 's.php';
+
 $db_host = 'localhost'; // Nama Server
 $db_user = 'root'; // User Server
 $db_pass = ''; // Password Server
-$db_name = 'yo'; // Nama Database
-//$id = $_GET['id'];
-//$full_name = $row['full_name'];
-//echo $id;
+$db_name = 'icai2019'; // Nama Database
 
-$cd = date("d-m-Y");
 
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 if (!$conn) {
-	die ('Gagal terhubung dengan MySQL: ' . mysqli_connect_error());	
+  die ('Gagal terhubung dengan MySQL: ' . mysqli_connect_error());  
 }
 
-$sql = "SELECT * FROM register";
+$sql2 = "SELECT COUNT(*) FROM register";
+$query = mysqli_query($conn, $sql2);
+$row = mysqli_fetch_array($query);
+
+//menghitung progress
+$i = 1;
+$bagi = $row['COUNT(*)'];
+$hitung = ($i/($bagi));
+
+$sql = "SELECT * 
+FROM register";
+
 $query = mysqli_query($conn, $sql);
 
+if (!$query) {
+  die ('SQL Error: ' . mysqli_error($conn));
+}
 
 while ($row = mysqli_fetch_array($query))
 {
-  $id = $row['id'];
-  $full_name = $row['full_name'];
-  echo $id;
-  echo $full_name;
 
-  $phpWord = new \PhpOffice\PhpWord\PhpWord();
-  $template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
-  $template->setValue('tanggal', $cd);
-  $template->setValue('ID', $id);
-  $template->setValue('full_name', $row['full_name']);
-  $template->setValue('reg_type', $row['reg_type']);
-  $template->setValue('price', $row['price']);
-  $template->setValue('price', $row['price']);
-  $template->saveAs('result.docx');
+
+  $id = $row['id'];
+$full_name = $row['full_name'];
+$cd = date("d-m-Y");
+$full_name=$row['full_name'];
+$reg_type=$row['reg_type'];
+$price=$row['price'];
+$inst=$row['inst'];
+$country=$row['country'];
+
+//mencetak semua invoice
+$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$template = new \PhpOffice\PhpWord\TemplateProcessor('berkas\invoice.docx');
+$template->setValue('tanggal', $cd);
+$template->setValue('ID', $id);
+$template->setValue('full_name', $row['full_name']);
+$template->setValue('reg_type', $row['reg_type']);
+$template->setValue('price', $row['price']);
+$template->setValue('inst', $row['inst']);
+$template->saveAs('Cetak\semua\inv_'.$id.'_'.$full_name.'.docx');
+
+//mencetak semua certifacate
+$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$template = new \PhpOffice\PhpWord\TemplateProcessor('berkas\cert.docx');
+$template->setValue('full_name', $row['full_name']);
+$template->setValue('inst', $row['inst']);
+$template->setValue('country', $row['country']);
+$template->saveAs('Cetak\semua\cert_'.$id.'_'.$full_name.'.docx');
+$hitung = ($i/($bagi))*100;
+$i++;
+
 
 //Membuat PDF dari Word
-
+/*
   $word = new COM("Word.Application") or die ("Could not initialise Object.");
   // set it to 1 to see the MS Word window (the actual opening of the document)
   $word->Visible = 0;
@@ -59,7 +86,7 @@ while ($row = mysqli_fetch_array($query))
   // clean up
   unset($word);
   //cetak($id);
-
+*/
 }
-
+echo $hitung."%";
 ?>
