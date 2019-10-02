@@ -12,55 +12,61 @@ $query = mysqli_query($conn, "SELECT * FROM register WHERE id='$id'");
 $peserta = mysqli_fetch_assoc($query);
 
 $reg_type = $peserta['reg_type'];
+$price = $peserta['price'];
+
+$query_jenis = mysqli_query($conn, "SELECT * FROM jenis WHERE regist_type='$reg_type' AND price='$price'");
+$jenis = mysqli_fetch_assoc($query_jenis);
+
+$jenis_reg = $jenis['type_reg'];
 
 error_reporting(0);
 
-if ($reg_type=="Presenter Student"){
+if ($jenis_reg==1){
 	$btn1="checked";
 }
-else if ($reg_type=="Presenter Reguler"){
+else if ($jenis_reg==2){
 	$btn2="checked";
 }
-else if ($reg_type=="Presenter MAI Member"){
+else if ($jenis_reg==3){
 	$btn3="checked";
 }
-else if ($reg_type=="Participant Student"){
+else if ($jenis_reg==4){
 	$btn4="checked";
 }
-else if ($reg_type=="Participant Reguler"){
+else if ($jenis_reg==5){
 	$btn5="checked";
 }
-else if ($reg_type=="Participant MAI Member"){
+else if ($jenis_reg==6){
 	$btn6="checked";
 }
-else if ($reg_type=="Additional Paper"){
+else if ($jenis_reg==7){
 	$btn7="checked";
 }
-else if ($reg_type=="Presenter Student"){
+else if ($jenis_reg==8){
 	$btn8="checked";
 }
-else if ($reg_type=="Presenter Reguler"){
+else if ($jenis_reg==9){
 	$btn9="checked";
 }
-else if ($reg_type=="Presenter WAS Member"){
+else if ($jenis_reg==10){
 	$btn10="checked";
 }
-else if ($reg_type=="Participant Student"){
+else if ($jenis_reg==11){
 	$btn11="checked";
 }
-else if ($reg_type=="Participant Reguler"){
+else if ($jenis_reg==12){
 	$btn12="checked";
 }
-else if ($reg_type=="Participant WAS Member"){
+else if ($jenis_reg==13){
 	$btn13="checked";
 }
-else if ($reg_type=="Additional Paper"){
+else if ($jenis_reg==14){
 	$btn14="checked";
 }
-else if ($reg_type=="Participant Member MAI"){
+else if ($jenis_reg==15){
 	$btn15="checked";
 }
-else if ($reg_type=="Participant Non Member"){
+else if ($jenis_reg==16){
 	$btn15="checked";
 }
 
