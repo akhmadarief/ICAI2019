@@ -233,7 +233,7 @@ else if ($jenis_reg==16){
                                     <div class="custom-control custom-radio">
                                         <div id="status" style="font-size:16px;">
                                             <label style="padding:-30px; font-size:20px">Status Keanggotaan</label>
-                                            <br><input type="radio" class="custom-control-input" value="Anggota" name="satus" <?php echo $member?>>
+                                            <br><input type="radio" class="custom-control-input" value="Anggota" name="status" <?php echo $member?>>
                                             <label class="custom-control-label">Anggota</label>
                                             <br><input type="radio" class="custom-control-input" value="" name="status" <?php echo $nonmember?>>
                                             <label class="custom-control-label">Bukan Anggota</label></br>
@@ -245,7 +245,7 @@ else if ($jenis_reg==16){
                                     <div class="custom-control custom-radio">
                                         <div id="reg_type" style="font-size:16px;">
                                             <label style="padding:-30px; font-size:20px">Registration Type for Indonesia</label>
-                                            <br><input type="radio" class="custom-control-input" value="1" name="type_reg" <?php echo $btn1?>>
+                                            <br><input type="radio" class="custom-control-input" value="1" name="type_reg" required <?php echo $btn1?>>
                                             <label class="custom-control-label" for="defaultUnchecked1">Presenter student : 1.500.000 IDR</label>
                                             <br><input type="radio" class="custom-control-input" value="2" name="type_reg" <?php echo $btn2?>>
                                             <label class="custom-control-label" for="defaultUnchecked2">Presenter reguler : 2.000.000 IDR</label>
