@@ -4,6 +4,7 @@ header("Refresh:2; url=admin.php");
 include("conf.php");
 
 $id = $_POST['id'];
+$no_mai = $_POST['no_mai'];
 $full_name = $_POST['full_name'];
 $degree = $_POST['degree'];
 $inst = $_POST['inst'];
@@ -15,8 +16,6 @@ $city = $_POST['city'];
 $region = $_POST['region'];
 $zip = $_POST['zip'];
 $country = $_POST['country'];
-$status = $_POST['status'];
-$no_mai = $_POST['no_mai'];
 
 $type_reg = $_POST['type_reg'];
 $query = mysqli_query($conn, "SELECT * FROM jenis where type_reg='$type_reg'");
