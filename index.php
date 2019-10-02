@@ -62,7 +62,8 @@
 
     <script>
       function confirm_reset() {
-          document.getElementById("contactform1").reset();
+          document.getElementById("member_edit").reset();
+          document.getElementById("member_reg").reset();
       }
 
       function konfirmasi() {
