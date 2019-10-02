@@ -116,28 +116,8 @@ else if ($jenis_reg==16){
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
-    
-    <script>
-       function confirm_reset() {
-          return confirm("Are you sure you want to reset all text?");
-      }
-      
-      function konfirmasi() {
-          var txt;
-          var r = confirm("Pastikan data sudah benar");
-          if (r == true) {
-             txt = "You pressed OK!";
-         } else {
-             event.preventDefault();
-         }
-     }
- </script>
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <style>
+	<style>
     body  {
         background: url("images/bg.jpg");
         background-repeat: no-repeat;
@@ -145,7 +125,7 @@ else if ($jenis_reg==16){
         background-color: #cccccc;
         background-attachment: fixed;
     }
-</style>
+	</style>
 </head>
 <body class="realestate_version">
 
@@ -183,51 +163,51 @@ else if ($jenis_reg==16){
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>No. Anggota MAI:</p>
-                                    <input type="text" name="no_mai" id="no_mai" value="<?php echo $peserta['no_mai']?>" class="form-control" placeholder="No. Anggota MAI">
+                                    <input type="text" name="no_mai" id="no_mai" value="<?php echo $peserta['no_mai']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Full Name:</p>
-                                    <input type="text" name="full_name" required id="full_name" value="<?php echo $peserta['full_name']?>" class="form-control" placeholder="Full Name">
+                                    <input type="text" name="full_name" required id="full_name" value="<?php echo $peserta['full_name']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Degree:</p>
-                                    <input type="text" name="degree" id="degree" value="<?php echo $peserta['degree']?>" class="form-control" placeholder="Degree">
+                                    <input type="text" name="degree" id="degree" value="<?php echo $peserta['degree']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Institution:</p>
-                                    <input type="text" name="inst" id="inst" value="<?php echo $peserta['inst']?>" class="form-control" placeholder="Institution">
+                                    <input type="text" name="inst" id="inst" value="<?php echo $peserta['inst']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Miling Address:</p>
-                                    <input type="text" name="email" id="email" value="<?php echo $peserta['email']?>" class="form-control" placeholder="Mailing Address">
+                                    <input type="text" name="email" id="email" value="<?php echo $peserta['email']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Phone:</p>
-                                    <input type="text" name="no_phone" id="no_phone" value="<?php echo $peserta['no_phone']?>" class="form-control" placeholder="Phone">
+                                    <input type="text" name="no_phone" id="no_phone" value="<?php echo $peserta['no_phone']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Mobile:</p>
-                                    <input type="text" name="no_mobile" id="no_mobile" value="<?php echo $peserta['no_mobile']?>" class="form-control" placeholder="Mobile">
+                                    <input type="text" name="no_mobile" id="no_mobile" value="<?php echo $peserta['no_mobile']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Street Address:</p>
-                                    <input type="text" name="st_address" id="st_address" value="<?php echo $peserta['st_address']?>" class="form-control" placeholder="Street Address">
+                                    <input type="text" name="st_address" id="st_address" value="<?php echo $peserta['st_address']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>City:</p>
-                                    <input type="text" name="city" id="city" value="<?php echo $peserta['city']?>" class="form-control" placeholder="City">
+                                    <input type="text" name="city" id="city" value="<?php echo $peserta['city']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>State/Province/Region:</p>
-                                    <input type="text" name="region" id="region" value="<?php echo $peserta['region']?>" class="form-control" placeholder="State/Province/Region">
+                                    <input type="text" name="region" id="region" value="<?php echo $peserta['region']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>Postal/Zip:</p>
-                                    <input type="text" name="zip" id="zip" value="<?php echo $peserta['zip']?>" class="form-control" placeholder="Postal/Zip Code">
+                                    <input type="text" name="zip" id="zip" value="<?php echo $peserta['zip']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>Country:</p>
-                                    <input type="text" name="country" id="country" value="<?php echo $peserta['country']?>" class="form-control" placeholder="Country">
+                                    <input type="text" name="country" id="country" value="<?php echo $peserta['country']?>" class="form-control">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <div class="custom-control custom-radio">
