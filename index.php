@@ -56,8 +56,8 @@ else{
 
     <script>
       function confirm_reset() {
-          document.getElementById("member_edit").reset();
-          document.getElementById("member_reg").reset();
+          document.getElementById("member").reset();
+          document.getElementById("reg").reset();
       }
 
       function konfirmasi() {
@@ -109,7 +109,7 @@ else{
                 <div class="col-md-6 wow slideInLeft hidden-xs hidden-sm">
                     <div class="contact_form">
                         <h3><i class="fa fa-envelope-o grd1 global-radius"></i> <b>REGISTRATION FORM</b></h3>
-                        <form id="member_edit" class="row" name="member" action="index.php" method="get">
+                        <form id="member" class="row" name="member" action="index.php" method="get">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
                                     <input type="sumbit" name="nomor_anggota" required id="nomor_anggota" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="No. Angota MAI (Member Only)">
@@ -119,7 +119,7 @@ else{
                                 </div>
                             </fieldset>
                         </form>
-                        <form id="member_reg" class="row" name="member_reg" action="insert.php" method="post">
+                        <form id="reg" class="row" name="reg" action="insert.php" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <input type="hidden" name="no_mai" required id="no_mai" value="<?php echo $member['nomor_anggota']?>" class="form-control">
