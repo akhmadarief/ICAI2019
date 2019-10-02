@@ -19,7 +19,7 @@ else {
 
   if ($conn->query($sql)){
     //echo "New record is updated sucessfully";
-    include 'cetak_cari.php';
+    include 'cetak_inv.php';
     
   }
   else{

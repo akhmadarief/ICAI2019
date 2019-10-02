@@ -122,7 +122,7 @@ $query = mysqli_query($conn, 'SELECT * FROM register');
 						echo "<tr>
 						<td><a href='edit.php?id=$row[id]'>Edit</a> |
 						<a href='bayar.php?id=$row[id]' target='_blank' rel='nofollow' >Bayar</a> |
-						<a href='cetak_cari.php?id=$row[id]' target='_blank' rel='nofollow'	>Cetak</a></td>
+						<a href='cetak_cert.php?id=$row[id]' target='_blank' rel='nofollow'	>Cetak</a></td>
 						<td>".$row['bayar']."</td>
 						<td>".$row['id']."</td>
 						<td>".$row['full_name']."</td>

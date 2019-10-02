@@ -2,9 +2,16 @@
 
 require_once 'bootstrap.php';
 require_once 'vendor/autoload.php';
-require_once 's.php';
-include("conf.php");
+//require_once 's.php';
 
+$db_host = 'localhost'; // Nama Server
+$db_user = 'root'; // User Server
+$db_pass = ''; // Password Server
+$db_name = 'icai2019'; // Nama Database
+$id = $_GET['id'];
+
+
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 if (!$conn) {
 	die ('Gagal terhubung dengan MySQL: ' . mysqli_connect_error());	
 }
@@ -19,38 +26,27 @@ if (!$query) {
 }
 
 
-//Mengganti kata dalam Word
 $row = mysqli_fetch_array($query);
-//$full_name = $row['full_name'];
-//echo $full_name;
+$full_name = $row['full_name'];
 
 
 $cd = date("d-m-Y");
-echo "Today is " .$cd;
-//echo "nama: " .$full_name;
-$full_name = $row['full_name'];
-//$tanggal = $cd;
-$id = $_GET['id'];
-//$reg_type = $row['reg_type'];
-//$price = $row['price'];
-$inst =  $row['inst'];
-$country = $row['country'];
-
-//include 'i.php';
-echo $inst;
-echo $full_name;
-echo $country;
+$full_name=$row['full_name'];
+$reg_type=$row['reg_type'];
+$price=$row['price'];
+$inst=$row['inst'];
+$country=$row['country'];
+include 'c_cert.php';
 
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
-$template = new \PhpOffice\PhpWord\TemplateProcessor('cert.docx');
-//$template->setValue('tanggal', $cd);
-//$template->setValue('ID', $id);
+$template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
+$template->setValue('tanggal', $cd);
+$template->setValue('ID', $id);
 $template->setValue('full_name', $row['full_name']);
-//$template->setValue('reg_type', $row['reg_type']);
-//$template->setValue('price', $row['price']);
+$template->setValue('reg_type', $row['reg_type']);
+$template->setValue('price', $row['price']);
 $template->setValue('inst', $row['inst']);
-$template->setValue('country', $row['country']);
-$template->saveAs('Cetak\certificate'.$id.'_'.$full_name.'.docx');
+$template->saveAs('Cetak\inv_'.$id.'_'.$full_name.'.docx');
 //include 's.php';
 
 //Membuat PDF dari Word
@@ -70,6 +66,7 @@ $word->ActiveDocument->ExportAsFixedFormat('C:\xampp\htdocs\ICAI2019\Cetak\Kwita
 $word->Quit(false);
   // clean up
 unset($word);
+exec("print C:\xampp\htdocs\ICAI2019\result.docx");
 cetak($id);
 
 echo '<a href="s.php" target="_new">Continue to next page</a>'
