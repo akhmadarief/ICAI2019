@@ -211,56 +211,58 @@ else{
                                 <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" style="word-wrap: break-word;" aria-labelledby="exampleModalLabel" aria-hidden="true" action="insert.php" method="post">
                                     <div class="modal-dialog" role="document">
                                     <div class="modal-content">
-                                        <div class="modal-body" style="font-size:16px;">
+                                        <div class="modal-header">
                                             Are you sure your data is correct?
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Full Name :</div>
-                                                <div class="entrydata col-xs-8" id="mfull_name"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Degree :</div>
-                                                <div class="entrydata col-xs-8" id="mdegree"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Institution :</div>
-                                                <div class="entrydata col-xs-8" id="minst"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Email :</div>
-                                                <div class="entrydata col-xs-8" id="memail"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Phone :</div>
-                                                <div class="entrydata col-xs-8" id="mno_phone"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Mobile :</div>
-                                                <div class="entrydata col-xs-8" id="mno_mobile"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Street Address :</div>
-                                                <div class="entrydata col-xs-8" id="mst_address"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">City :</div>
-                                                <div class="entrydata col-xs-8" id="mcity"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">State/Province/Region :</div>
-                                                <div class="entrydata col-xs-8" id="mregion"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Postal/Zip Code :</div>
-                                                <div class="entrydata col-xs-8" id="mzip"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Country :</div>
-                                                <div class="entrydata col-xs-8" id="mcountry"></div>
-                                            </div>
-                                            <div class="row" style="display: block;">
-                                                <div class="entryname col-xs-4">Registration Type :</div>
-                                                <div class="entrydata col-xs-8" name="mreg_type"></div>
-                                            </div>
+                                        </div>
+                                        <div class="modal-body" style="font-size:16px;">
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Full Name :</div>
+                                                    <div class="entrydata col-xs-7" id="mfull_name" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Degree :</div>
+                                                    <div class="entrydata col-xs-7" id="mdegree" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Institution :</div>
+                                                    <div class="entrydata col-xs-7" id="minst" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Email :</div>
+                                                    <div class="entrydata col-xs-7" id="memail" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Phone :</div>
+                                                    <div class="entrydata col-xs-7" id="mno_phone" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Mobile :</div>
+                                                    <div class="entrydata col-xs-7" id="mno_mobile" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Street Address :</div>
+                                                    <div class="entrydata col-xs-7" id="mst_address" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">City :</div>
+                                                    <div class="entrydata col-xs-7" id="mcity" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">State/Province/Region :</div>
+                                                    <div class="entrydata col-xs-7" id="mregion" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Postal/Zip Code :</div>
+                                                    <div class="entrydata col-xs-7" id="mzip" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Country :</div>
+                                                    <div class="entrydata col-xs-7" id="mcountry" style="padding-left:0;"></div>
+                                                </div>
+                                                <div class="row" style="display: block;">
+                                                    <div class="entryname col-xs-5" style="text-align: right;">Registration Type :</div>
+                                                    <div class="entrydata col-xs-7" name="mreg_type" style="padding-left:0;"></div>
+                                                </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="submit" value="update" id="submit" class="btn btn-primary">Yes</button>
@@ -285,7 +287,7 @@ else{
                                         });
                                         hideEmptyInputs();    
                                     });
-                                    $('#sumbitModal').on('show.bs.modal', function (e) {
+                                    $('#submitModal').on('show.bs.modal', function (e) {
                                         if(all == ""){
                                             e.preventDefault();
                                         }
