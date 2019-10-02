@@ -104,11 +104,6 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" ><img src="images/logos/logoicai.png" alt="image"></a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="active" href="admin.php">Admin</a></li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
