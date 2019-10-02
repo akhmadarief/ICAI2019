@@ -235,11 +235,11 @@ else{
                                             </div>
                                             <div class="row" style="display: block;">
                                                 <div class="entryname col-xs-4">Phone :</div>
-                                                <div class="entrydata col-xs-8" id="mphone"></div>
+                                                <div class="entrydata col-xs-8" id="mno_phone"></div>
                                             </div>
                                             <div class="row" style="display: block;">
                                                 <div class="entryname col-xs-4">Mobile :</div>
-                                                <div class="entrydata col-xs-8" id="mmobile"></div>
+                                                <div class="entrydata col-xs-8" id="mno_mobile"></div>
                                             </div>
                                             <div class="row" style="display: block;">
                                                 <div class="entryname col-xs-4">Street Address :</div>
