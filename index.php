@@ -59,16 +59,6 @@ else{
           document.getElementById("member").reset();
           document.getElementById("reg").reset();
       }
-
-      function konfirmasi() {
-          var txt;
-          var r = confirm("Pastikan data sudah benar");
-          if (r == true) {
-             txt = "You pressed OK!";
-         } else {
-             event.preventDefault();
-         }
-     }
  </script>
 
     <!--[if lt IE 9]>
