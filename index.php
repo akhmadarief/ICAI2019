@@ -1,27 +1,25 @@
 <?php
 
-	$server = "localhost";
-	$user = "root";
-	$password = "";
-	$db_name = "icai2019";
-	$db = mysqli_connect($server, $user, $password, $db_name);
-
+$server = "localhost";
+$user = "root";
+$password = "";
+$db_name = "icai2019";
+$db = mysqli_connect($server, $user, $password, $db_name);
 	if( !isset($_GET['nomor_anggota']) ){
-			error_reporting(1);
-		}
-	else{
-		//ambil id dari query string
-		$nomor_anggota = $_GET['nomor_anggota'];
-		$query = mysqli_query($db, "SELECT * FROM daftar_keanggotaan WHERE nomor_anggota='$nomor_anggota'");
-		$member = mysqli_fetch_assoc($query);
-		if($query->num_rows == 0){
-			echo "<script>alert('No. Anggota MAI not found');</script>";
-		}
-		else{
-			$status='Anggota';
-		}
-		
+		error_reporting(0);
 	}
+else{
+	//ambil id dari query string
+	$nomor_anggota = $_GET['nomor_anggota'];
+	$query = mysqli_query($db, "SELECT * FROM daftar_keanggotaan WHERE nomor_anggota='$nomor_anggota'");
+	$member = mysqli_fetch_assoc($query);
+	if($query->num_rows == 0){
+		echo "<script>alert('No. Anggota MAI not found');</script>";
+	}
+	else{
+		$status='Anggota';
+	}
+}
 	
 ?>
 
