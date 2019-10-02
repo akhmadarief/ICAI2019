@@ -1,15 +1,11 @@
 <?php
 
-$server = "localhost";
-$user = "root";
-$password = "";
-$db_name = "icai2019";
-$db = mysqli_connect($server, $user, $password, $db_name);
-	if( !isset($_GET['nomor_anggota']) ){
-		error_reporting(0);
-	}
+include("conf.php");
+
+if( !isset($_GET['nomor_anggota']) ){
+	error_reporting(0);
+}
 else{
-	//ambil id dari query string
 	$nomor_anggota = $_GET['nomor_anggota'];
 	$query = mysqli_query($db, "SELECT * FROM daftar_keanggotaan WHERE nomor_anggota='$nomor_anggota'");
 	$member = mysqli_fetch_assoc($query);
@@ -218,7 +214,7 @@ else{
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <button type="submit" value="update" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
+                                    <button type="submit" value="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
                                     <button type="button" data-toggle="modal" data-target="#resetModal" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
