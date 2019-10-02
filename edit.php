@@ -2,6 +2,8 @@
 
 include("conf.php");
 
+error_reporting(0);
+
 if (!isset($_GET['id'])){
 	header('Location: admin.php');
 }
@@ -11,6 +13,15 @@ $id = $_GET['id'];
 $query = mysqli_query($conn, "SELECT * FROM register WHERE id='$id'");
 $peserta = mysqli_fetch_assoc($query);
 
+//status keanggotaan
+if ($peserta['status'] == "Anggota"){
+	$member = "checked";
+}
+else{
+	$nonmember = "checked";
+}
+
+//tipe registrasi
 $reg_type = $peserta['reg_type'];
 $price = $peserta['price'];
 
@@ -19,7 +30,6 @@ $jenis = mysqli_fetch_assoc($query_jenis);
 
 $jenis_reg = $jenis['type_reg'];
 
-error_reporting(0);
 
 if ($jenis_reg==1){
 	$btn1="checked";
@@ -221,12 +231,24 @@ else if ($jenis_reg==16){
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <div class="custom-control custom-radio">
+                                        <div id="status" style="font-size:16px;">
+                                            <label style="padding:-30px; font-size:20px">Status Keanggotaan</label>
+                                            <br><input type="radio" class="custom-control-input" value="Anggota" name="satus" <?php echo $member?>>
+                                            <label class="custom-control-label">Anggota</label>
+                                            <br><input type="radio" class="custom-control-input" value="" name="status" <?php echo $nonmember?>>
+                                            <label class="custom-control-label">Bukan Anggota</label></br>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="custom-control custom-radio">
                                         <div id="reg_type" style="font-size:16px;">
                                             <label style="padding:-30px; font-size:20px">Registration Type for Indonesia</label>
                                             <br><input type="radio" class="custom-control-input" value="1" name="type_reg" <?php echo $btn1?>>
-                                            <label class="custom-control-label" for="presenter_student">Presenter student : 1.500.000 IDR</label>
+                                            <label class="custom-control-label" for="defaultUnchecked1">Presenter student : 1.500.000 IDR</label>
                                             <br><input type="radio" class="custom-control-input" value="2" name="type_reg" <?php echo $btn2?>>
-                                            <label class="custom-control-label" for="presenter_reguler">Presenter reguler : 2.000.000 IDR</label>
+                                            <label class="custom-control-label" for="defaultUnchecked2">Presenter reguler : 2.000.000 IDR</label>
                                             <br><input type="radio" class="custom-control-input" value="3" name="type_reg" <?php echo $btn3?>>
                                             <label class="custom-control-label" for="defaultUnchecked3">Presenter MAI Member : 1.500.000 IDR</label>
                                             <br><input type="radio" class="custom-control-input" value="4" name="type_reg" <?php echo $btn4?>>
