@@ -77,6 +77,10 @@ else{
 </head>
 <body class="realestate_version">
 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
     <!-- LOADER -->
     <div id="preloader">
         <span class="loader"><span class="loader-inner"></span></span>
@@ -204,24 +208,111 @@ else{
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <button type="button" data-toggle="modal" data-target="#submitModal" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
+                                    <button id="submitButton" type="button" data-toggle="modal" data-target="#submitModal" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
                                     <button type="button" data-toggle="modal" data-target="#resetModal" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
                                 </div>
-                                <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" action="insert.php" method="post">
+                                <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" style="word-wrap: break-word;" aria-labelledby="exampleModalLabel" aria-hidden="true" action="insert.php" method="post">
                                     <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-body" style="font-size:16px;">
-                                        Are you sure your data is correct?
+                                            Are you sure your data is correct?
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Full Name :</div>
+                                                <div class="entrydata col-xs-8" id="mfull_name"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Degree :</div>
+                                                <div class="entrydata col-xs-8" id="mdegree"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Institution :</div>
+                                                <div class="entrydata col-xs-8" id="minst"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Email :</div>
+                                                <div class="entrydata col-xs-8" id="memail"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Phone :</div>
+                                                <div class="entrydata col-xs-8" id="mphone"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Mobile :</div>
+                                                <div class="entrydata col-xs-8" id="mmobile"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Street Address :</div>
+                                                <div class="entrydata col-xs-8" id="mst_address"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">City :</div>
+                                                <div class="entrydata col-xs-8" id="mcity"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">State/Province/Region :</div>
+                                                <div class="entrydata col-xs-8" id="mregion"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Postal/Zip Code :</div>
+                                                <div class="entrydata col-xs-8" id="mzip"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Country :</div>
+                                                <div class="entrydata col-xs-8" id="mcountry"></div>
+                                            </div>
+                                            <div class="row" style="display: block;">
+                                                <div class="entryname col-xs-4">Registration Type :</div>
+                                                <div class="entrydata col-xs-8" name="mreg_type"></div>
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-                                        <button type="submit" value="update" id="submit" class="btn btn-primary">Yes</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                            <button type="submit" value="update" id="submit" class="btn btn-primary">Yes</button>
                                         </div>
                                     </div>
                                     </div>
                                 </div>
+                                <script type="text/javascript">
+                                    var all = "";
+                                    $('#submitButton').click(function () {
+                                    /* when the button in the form, 
+                                    display the entered values in the modal */
+                                    //console.log($("from input"));
+                                        all = "";
+                                        $.each($("form input"),function(i,v){
+                                            var id= $(this).attr('id');
+                                            //console.log(id);
+                                            //console.log("#m"+id);
+                                            $("#m"+id).text($(this).val());
+                                            all = all + $(this).val();
+                                        });
+                                        hideEmptyInputs();    
+                                    });
+                                    $('#sumbitModal').on('show.bs.modal', function (e) {
+                                        if(all == ""){
+                                            e.preventDefault();
+                                        }
+                                    })
+                                    
+                                    function hideEmptyInputs(){
+                                    //console.log($("#myModal div"));
+                                    //console.log($("#myModal div[id^=m]"));
+                                        $.each($("#submitModal div[id^=m]"),function(i,v){
+                                            //console.log($(this).text());
+                                            var value = $(this).text();
+                                            if(value == ""){
+                                            //Hide if empty
+                                                $(this).parent().css('display','none');
+                                            }
+                                            else{
+                                                $(this).parent().css('display','block');      
+                                            }
+                                        });
+                                    //console.log("algo");
+                                    }
+                                </script>
                             </fieldset>
                         </form>
                     </div>
