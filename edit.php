@@ -191,43 +191,43 @@ else if ($jenis_reg==16){
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Degree:</p>
-                                    <input type="text" name="degree" required id="degree" value="<?php echo $peserta['degree']?>" class="form-control" placeholder="Degree">
+                                    <input type="text" name="degree" id="degree" value="<?php echo $peserta['degree']?>" class="form-control" placeholder="Degree">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Institution:</p>
-                                    <input type="text" name="inst" required id="inst" value="<?php echo $peserta['inst']?>" class="form-control" placeholder="Institution">
+                                    <input type="text" name="inst" id="inst" value="<?php echo $peserta['inst']?>" class="form-control" placeholder="Institution">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Miling Address:</p>
-                                    <input type="text" name="email" required id="email" value="<?php echo $peserta['email']?>" class="form-control" placeholder="Mailing Address">
+                                    <input type="text" name="email" id="email" value="<?php echo $peserta['email']?>" class="form-control" placeholder="Mailing Address">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Phone:</p>
-                                    <input type="text" name="no_phone" required id="no_phone" value="<?php echo $peserta['no_phone']?>" class="form-control" placeholder="Phone">
+                                    <input type="text" name="no_phone" id="no_phone" value="<?php echo $peserta['no_phone']?>" class="form-control" placeholder="Phone">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Mobile:</p>
-                                    <input type="text" name="no_mobile" required id="no_mobile" value="<?php echo $peserta['no_mobile']?>" class="form-control" placeholder="Mobile">
+                                    <input type="text" name="no_mobile" id="no_mobile" value="<?php echo $peserta['no_mobile']?>" class="form-control" placeholder="Mobile">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Street Address:</p>
-                                    <input type="text" name="st_address" required id="st_address" value="<?php echo $peserta['st_address']?>" class="form-control" placeholder="Street Address">
+                                    <input type="text" name="st_address" id="st_address" value="<?php echo $peserta['st_address']?>" class="form-control" placeholder="Street Address">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>City:</p>
-                                    <input type="text" name="city" required id="city" value="<?php echo $peserta['city']?>" class="form-control" placeholder="City">
+                                    <input type="text" name="city" id="city" value="<?php echo $peserta['city']?>" class="form-control" placeholder="City">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>State/Province/Region:</p>
-                                    <input type="text" name="region" required id="region" value="<?php echo $peserta['region']?>" class="form-control" placeholder="State/Province/Region">
+                                    <input type="text" name="region" id="region" value="<?php echo $peserta['region']?>" class="form-control" placeholder="State/Province/Region">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>Postal/Zip:</p>
-                                    <input type="text" name="zip" required id="zip" value="<?php echo $peserta['zip']?>" class="form-control" placeholder="Postal/Zip Code">
+                                    <input type="text" name="zip" id="zip" value="<?php echo $peserta['zip']?>" class="form-control" placeholder="Postal/Zip Code">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>Country:</p>
-                                    <input type="text" name="country" required id="country" value="<?php echo $peserta['country']?>" class="form-control" placeholder="Country">
+                                    <input type="text" name="country" id="country" value="<?php echo $peserta['country']?>" class="form-control" placeholder="Country">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <div class="custom-control custom-radio">
