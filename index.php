@@ -7,7 +7,7 @@ if( !isset($_GET['nomor_anggota']) ){
 }
 else{
 	$nomor_anggota = $_GET['nomor_anggota'];
-	$query = mysqli_query($db, "SELECT * FROM daftar_keanggotaan WHERE nomor_anggota='$nomor_anggota'");
+	$query = mysqli_query($conn, "SELECT * FROM daftar_keanggotaan WHERE nomor_anggota='$nomor_anggota'");
 	$member = mysqli_fetch_assoc($query);
 	if($query->num_rows == 0){
 		echo "<script>alert('No. Anggota MAI not found');</script>";
@@ -16,7 +16,7 @@ else{
 		$status='Anggota';
 	}
 }
-	
+
 ?>
 
 <!DOCTYPE html>
