@@ -2,7 +2,7 @@
 //Untuk memanggil modul
 require_once 'bootstrap.php';
 require_once 'vendor/autoload.php';
-require_once 's.php';
+//require_once 's.php';
 
 //Koneksi Database
 $db_host = 'localhost'; // Nama Server
@@ -37,7 +37,8 @@ $full_name=$row['full_name'];
 $reg_type=$row['reg_type'];
 $price=$row['price'];
 $inst=$row['inst'];
-include 'c_cert.php';
+$country=$row['country'];
+include 'c_inv.php';
 
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
 $template = new \PhpOffice\PhpWord\TemplateProcessor('invoice.docx');
