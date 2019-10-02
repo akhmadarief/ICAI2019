@@ -261,7 +261,7 @@ else{
                                                 </div>
                                                 <div class="row" style="display: block;">
                                                     <div class="entryname col-xs-5" style="text-align: right;">Registration Type :</div>
-                                                    <div class="entrydata col-xs-7" name="mreg_type" style="padding-left:0;"></div>
+                                                    <div class="entrydata col-xs-7" id="mreg_type" style="padding-left:0;"></div>
                                                 </div>
                                         </div>
                                         <div class="modal-footer">
