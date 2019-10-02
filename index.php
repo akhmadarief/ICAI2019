@@ -214,10 +214,23 @@ else{
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <button type="submit" value="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
+                                    <button type="button" data-toggle="modal" data-target="#submitModal" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
                                     <button type="button" data-toggle="modal" data-target="#resetModal" class="btn btn-light btn-radius btn-brd grd1 btn-block">Reset</button>
+                                </div>
+                                <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" action="insert.php" method="post">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body" style="font-size:16px;">
+                                        Are you sure your data is correct?
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                        <button type="submit" value="update" id="submit" class="btn btn-primary">Yes</button>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </fieldset>
                         </form>
