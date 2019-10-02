@@ -95,7 +95,7 @@
 				<P class="p0 ft1">The 9*<SPAN class="ft0">th </SPAN>International Conference</P>
 				<P class="p1 ft3">of Aquaculture Indonesia <SPAN class="ft2">2019</SPAN></P>
 				<P class="p2 ft4">October <NOBR>4-5,</NOBR> 2019 – Surabaya, Indonesia</P>
-				<P class="p3 ft5">INVOICE # <NOBR><?php echo $tanggal; ?>-<?php echo $id; ?></NOBR></P>
+				<P class="p3 ft5">INVOICE # <NOBR><?php echo $cd; ?>-<?php echo $id; ?></NOBR></P>
 				<P class="p4 ft6">Invoice To:</P>
 				<P class="p5 ft6"><?php echo $full_name; ?></P>
 				<P class="p6 ft7">Institution : <?php echo $inst; ?></P>
