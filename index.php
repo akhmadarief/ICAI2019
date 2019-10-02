@@ -164,7 +164,7 @@ else{
                                     <div class="custom-control custom-radio">  <!--Additional paper : 50 USD apa ini??????? -->
                                         <div id="reg_type" style="font-size:16px;">
                                             <label style="padding:-30px; font-size:20px">Registration Type for Indonesia</label>
-                                            <br><input type="radio" class="custom-control-input" value="1" name="type_reg">
+                                            <br><input type="radio" class="custom-control-input" value="1" name="type_reg" required>
                                             <label class="custom-control-label" for="defaultUnchecked1">Presenter student : 1.500.000 IDR</label>
                                             <br><input type="radio" class="custom-control-input" value="2" name="type_reg">
                                             <label class="custom-control-label" for="defaultUnchecked2">Presenter reguler : 2.000.000 IDR</label>
