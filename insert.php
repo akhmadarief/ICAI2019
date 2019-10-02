@@ -17,11 +17,11 @@ $zip = $_POST['zip'];
 $country = $_POST['country'];
 $status = $_POST['status'];
 $no_mai = $_POST['no_mai'];
-$reg_id = $_POST['type_reg'];
-$reg_type = $_POST['type_reg'];
 
-$query = mysqli_query($conn, "SELECT * FROM jenis where type_reg='$reg_type'");
+$type_reg = $_POST['type_reg'];
+$query = mysqli_query($conn, "SELECT * FROM jenis where type_reg='$type_reg'");
 $row = mysqli_fetch_array($query);
+
 $reg_type = $row['regist_type'];
 $price = $row['price'];
 
