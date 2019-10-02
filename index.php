@@ -54,18 +54,14 @@ else{
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
 
-    <script>
-      function confirm_reset() {
-          document.getElementById("member").reset();
-          document.getElementById("reg").reset();
-      }
- </script>
+	<script>
+	function confirm_reset() {
+		document.getElementById("member").reset();
+		document.getElementById("reg").reset();
+	}
+	</script>
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <style>
+	<style>
     body  {
         background: url("images/bg.jpg");
         background-repeat: no-repeat;
@@ -73,7 +69,7 @@ else{
         background-color: #cccccc;
         background-attachment: fixed;
     }
-</style>
+	</style>
 </head>
 <body class="realestate_version">
 
@@ -267,8 +263,8 @@ else{
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
                                             <button type="submit" value="update" id="submit" class="btn btn-primary">Yes</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
                                         </div>
                                     </div>
                                     </div>
@@ -322,8 +318,8 @@ else{
                               Are you sure to reset all data?
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                               <button type="button" onclick="confirm_reset()" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                             </div>
                           </div>
                         </div>

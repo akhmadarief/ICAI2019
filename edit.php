@@ -2,6 +2,8 @@
 
 include("conf.php");
 
+error_reporting(0);
+
 if (!isset($_GET['id'])){
 	header('Location: admin.php');
 }
@@ -11,6 +13,15 @@ $id = $_GET['id'];
 $query = mysqli_query($conn, "SELECT * FROM register WHERE id='$id'");
 $peserta = mysqli_fetch_assoc($query);
 
+//status keanggotaan
+if ($peserta['status'] == "Anggota"){
+	$member = "checked";
+}
+else{
+	$nonmember = "checked";
+}
+
+//tipe registrasi
 $reg_type = $peserta['reg_type'];
 $price = $peserta['price'];
 
@@ -19,7 +30,6 @@ $jenis = mysqli_fetch_assoc($query_jenis);
 
 $jenis_reg = $jenis['type_reg'];
 
-error_reporting(0);
 
 if ($jenis_reg==1){
 	$btn1="checked";
@@ -181,52 +191,64 @@ else if ($jenis_reg==16){
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Degree:</p>
-                                    <input type="text" name="degree" required id="degree" value="<?php echo $peserta['degree']?>" class="form-control" placeholder="Degree">
+                                    <input type="text" name="degree" id="degree" value="<?php echo $peserta['degree']?>" class="form-control" placeholder="Degree">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Institution:</p>
-                                    <input type="text" name="inst" required id="inst" value="<?php echo $peserta['inst']?>" class="form-control" placeholder="Institution">
+                                    <input type="text" name="inst" id="inst" value="<?php echo $peserta['inst']?>" class="form-control" placeholder="Institution">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Miling Address:</p>
-                                    <input type="text" name="email" required id="email" value="<?php echo $peserta['email']?>" class="form-control" placeholder="Mailing Address">
+                                    <input type="text" name="email" id="email" value="<?php echo $peserta['email']?>" class="form-control" placeholder="Mailing Address">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Phone:</p>
-                                    <input type="text" name="no_phone" required id="no_phone" value="<?php echo $peserta['no_phone']?>" class="form-control" placeholder="Phone">
+                                    <input type="text" name="no_phone" id="no_phone" value="<?php echo $peserta['no_phone']?>" class="form-control" placeholder="Phone">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Mobile:</p>
-                                    <input type="text" name="no_mobile" required id="no_mobile" value="<?php echo $peserta['no_mobile']?>" class="form-control" placeholder="Mobile">
+                                    <input type="text" name="no_mobile" id="no_mobile" value="<?php echo $peserta['no_mobile']?>" class="form-control" placeholder="Mobile">
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <p>Street Address:</p>
-                                    <input type="text" name="st_address" required id="st_address" value="<?php echo $peserta['st_address']?>" class="form-control" placeholder="Street Address">
+                                    <input type="text" name="st_address" id="st_address" value="<?php echo $peserta['st_address']?>" class="form-control" placeholder="Street Address">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>City:</p>
-                                    <input type="text" name="city" required id="city" value="<?php echo $peserta['city']?>" class="form-control" placeholder="City">
+                                    <input type="text" name="city" id="city" value="<?php echo $peserta['city']?>" class="form-control" placeholder="City">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>State/Province/Region:</p>
-                                    <input type="text" name="region" required id="region" value="<?php echo $peserta['region']?>" class="form-control" placeholder="State/Province/Region">
+                                    <input type="text" name="region" id="region" value="<?php echo $peserta['region']?>" class="form-control" placeholder="State/Province/Region">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>Postal/Zip:</p>
-                                    <input type="text" name="zip" required id="zip" value="<?php echo $peserta['zip']?>" class="form-control" placeholder="Postal/Zip Code">
+                                    <input type="text" name="zip" id="zip" value="<?php echo $peserta['zip']?>" class="form-control" placeholder="Postal/Zip Code">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <p>Country:</p>
-                                    <input type="text" name="country" required id="country" value="<?php echo $peserta['country']?>" class="form-control" placeholder="Country">
+                                    <input type="text" name="country" id="country" value="<?php echo $peserta['country']?>" class="form-control" placeholder="Country">
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="custom-control custom-radio">
+                                        <div id="status" style="font-size:16px;">
+                                            <label style="padding:-30px; font-size:20px">Status Keanggotaan</label>
+                                            <br><input type="radio" class="custom-control-input" value="Anggota" name="satus" <?php echo $member?>>
+                                            <label class="custom-control-label">Anggota</label>
+                                            <br><input type="radio" class="custom-control-input" value="" name="status" <?php echo $nonmember?>>
+                                            <label class="custom-control-label">Bukan Anggota</label></br>
+                                            <br>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <div class="custom-control custom-radio">
                                         <div id="reg_type" style="font-size:16px;">
                                             <label style="padding:-30px; font-size:20px">Registration Type for Indonesia</label>
                                             <br><input type="radio" class="custom-control-input" value="1" name="type_reg" <?php echo $btn1?>>
-                                            <label class="custom-control-label" for="presenter_student">Presenter student : 1.500.000 IDR</label>
+                                            <label class="custom-control-label" for="defaultUnchecked1">Presenter student : 1.500.000 IDR</label>
                                             <br><input type="radio" class="custom-control-input" value="2" name="type_reg" <?php echo $btn2?>>
-                                            <label class="custom-control-label" for="presenter_reguler">Presenter reguler : 2.000.000 IDR</label>
+                                            <label class="custom-control-label" for="defaultUnchecked2">Presenter reguler : 2.000.000 IDR</label>
                                             <br><input type="radio" class="custom-control-input" value="3" name="type_reg" <?php echo $btn3?>>
                                             <label class="custom-control-label" for="defaultUnchecked3">Presenter MAI Member : 1.500.000 IDR</label>
                                             <br><input type="radio" class="custom-control-input" value="4" name="type_reg" <?php echo $btn4?>>
