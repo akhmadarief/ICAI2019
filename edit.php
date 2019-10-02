@@ -67,7 +67,7 @@ else if ($jenis_reg==15){
 	$btn15="checked";
 }
 else if ($jenis_reg==16){
-	$btn15="checked";
+	$btn16="checked";
 }
 
 ?>
