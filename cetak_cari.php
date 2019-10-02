@@ -1,19 +1,10 @@
 <?php
-//Untuk memanggil modul
+
 require_once 'bootstrap.php';
 require_once 'vendor/autoload.php';
 require_once 's.php';
+include("conf.php");
 
-//Koneksi Database
-$db_host = 'localhost'; // Nama Server
-$db_user = 'root'; // User Server
-$db_pass = ''; // Password Server
-$db_name = 'yo'; // Nama Database
-$id = $_GET['id'];
-//$full_name = $row['full_name'];
-//echo $id;
-
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 if (!$conn) {
 	die ('Gagal terhubung dengan MySQL: ' . mysqli_connect_error());	
 }
