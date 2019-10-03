@@ -101,7 +101,7 @@ else{
                         <form id="member" class="row" name="member" action="index.php" method="get">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="sumbit" name="nomor_anggota" required id="nomor_anggota" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="No. Angota MAI (Member Only)">
+                                    <input type="sumbit" name="nomor_anggota" required id="nomor_anggota" value="<?php echo $member['nomor_anggota']?>" class="form-control" placeholder="No. MAI (Member Only)">
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                                     <button type="submit" value="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Check</button>
@@ -325,6 +325,12 @@ else{
                             </div>
                           </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="big-tagline clearfix">
+                        <h2>International Conference of Aquaculture Indonesia</h2>
+                        <p class="lead">October 4-5th, 2019 - Surabaya, Indonesia</p>
                     </div>
                 </div>
             </div>
