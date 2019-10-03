@@ -88,7 +88,7 @@ $query = mysqli_query($conn, 'SELECT * FROM register');
           <p class="lead">This is ICAI 2019 participant data, as an admin we are very grateful if you can use it wisely, thanks!</p>
         </div><!-- end title -->
         <div class="row">
-          <a data-scroll="" href="#gallery" class="btn btn-light btn-radius grd1 btn-brd" style="margin-bottom: 30px">Print All</a>
+          <a data-scroll="" href="cetak_semua.php" target='_blank' rel='nofollow' class="btn btn-light btn-radius grd1 btn-brd" style="margin-bottom: 30px">Print All</a>
           <div class="container-table100">
             <div class="table-responsive">
               <div class="wrap-table100">

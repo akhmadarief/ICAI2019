@@ -3,6 +3,7 @@
 require_once 'bootstrap.php';
 require_once 'vendor/autoload.php';
 require "conf.php";
+set_time_limit(600);
 
 $sql2 = "SELECT COUNT(*) FROM register";
 $query = mysqli_query($conn, $sql2);
