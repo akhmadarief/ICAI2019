@@ -27,6 +27,7 @@ if ($peserta['status'] == "MAI"){
 }
 else if ($peserta['status'] == "WAS"){
 	$was = "checked";
+}
 else{
 	$nonmember = "checked";
 }
@@ -225,7 +226,7 @@ else if ($jenis_reg==16){
                                             <label style="padding:-30px; font-size:20px">Status Bayar</label>
                                             <br><input type="radio" class="custom-control-input" value="Lunas" name="bayar" <?php echo $lunas?>>
                                             <label class="custom-control-label">Lunas</label>
-                                            <br><input type="radio" class="custom-control-input" value="" name="status" <?php echo $belumlunas?>>
+                                            <br><input type="radio" class="custom-control-input" value="" name="bayar" <?php echo $belumlunas?>>
                                             <label class="custom-control-label">Belum Lunas</label></br>
                                             <br>
                                         </div>
