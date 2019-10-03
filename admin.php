@@ -97,7 +97,6 @@ $query = mysqli_query($conn, 'SELECT * FROM register');
                     <tr class="table100-head">
                       <th scope="col">Option</th>
                       <th scope="col">Status Bayar</th>
-                      <th scope="col">ID</th>
                       <th scope="col">Full Name</th>
                       <th scope="col">Degree</th>
                       <th scope="col">Institution</th>
@@ -125,7 +124,6 @@ $query = mysqli_query($conn, 'SELECT * FROM register');
 						<a href='bayar.php?id=$row[id]' target='_blank' rel='nofollow' >Bayar</a> |
 						<a href='cetak_cert.php?id=$row[id]' target='_blank' rel='nofollow'	>Cetak</a></td>
 						<td>".$row['bayar']."</td>
-						<td>".$row['id']."</td>
 						<td>".$row['full_name']."</td>
 						<td>".$row['degree']."</td>
 						<td>".$row['inst']."</td>
