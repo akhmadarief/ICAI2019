@@ -2,7 +2,7 @@
 
 include("conf.php");
 
-$query = mysqli_query($conn, 'SELECT * FROM register');
+$query = mysqli_query($conn, 'SELECT * FROM register ORDER BY full_name');
 
 ?>
 
