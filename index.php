@@ -329,8 +329,8 @@ else{
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="big-tagline clearfix">
-                        <h2>International Conference of Aquaculture Indonesia</h2>
-                        <p class="lead">October 4-5th, 2019 - Surabaya, Indonesia</p>
+                        <h3 style="font-size: 50px; position: fixed; color: #ffffff; padding-right: 30px;">International Conference of Aquaculture Indonesia</h3>
+                        <h2 style="font-size: 25px; position: fixed; padding: 150px 0 30px;">October 4-5th, 2019 - Surabaya, Indonesia</h2>
                     </div>
                 </div>
             </div>
