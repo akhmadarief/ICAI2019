@@ -13,7 +13,7 @@ else{
 		echo "<script>alert('No. Anggota MAI not found');</script>";
 	}
 	else{
-		$status='Anggota';
+		$status='MAI';
 	}
 }
 

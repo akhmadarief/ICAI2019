@@ -17,6 +17,7 @@ $region = $_POST['region'];
 $zip = $_POST['zip'];
 $country = $_POST['country'];
 $status = $_POST['status'];
+$bayar = $_POST['bayar'];
 
 $type_reg = $_POST['type_reg'];
 $query = mysqli_query($conn, "SELECT * FROM jenis where type_reg='$type_reg'");
@@ -25,7 +26,7 @@ $row = mysqli_fetch_array($query);
 $reg_type = $row['regist_type'];
 $price = $row['price'];
 
-$sql = "UPDATE register SET full_name='$full_name', degree='$degree', inst='$inst', email='$email', no_phone='$no_phone', no_mobile='$no_mobile', st_address='$st_address', city='$city', region='$region', zip='$zip', country='$country', status='$status', reg_type='$reg_type', no_mai='$no_mai', price='$price' WHERE id='$id'";
+$sql = "UPDATE register SET bayar='$bayar', full_name='$full_name', degree='$degree', inst='$inst', email='$email', no_phone='$no_phone', no_mobile='$no_mobile', st_address='$st_address', city='$city', region='$region', zip='$zip', country='$country', status='$status', reg_type='$reg_type', no_mai='$no_mai', price='$price' WHERE id='$id'";
 
 if ($conn->query($sql)){
 	echo "New record is updated sucessfully";

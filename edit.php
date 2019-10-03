@@ -13,10 +13,20 @@ $id = $_GET['id'];
 $query = mysqli_query($conn, "SELECT * FROM register WHERE id='$id'");
 $peserta = mysqli_fetch_assoc($query);
 
-//status keanggotaan
-if ($peserta['status'] == "Anggota"){
-	$member = "checked";
+//status bayar
+if ($peserta['bayar'] == "Lunas"){
+	$lunas = "checked";
 }
+else{
+	$belumlunas = "checked";
+}
+
+//status keanggotaan
+if ($peserta['status'] == "MAI"){
+	$mai = "checked";
+}
+else if ($peserta['status'] == "WAS"){
+	$was = "checked";
 else{
 	$nonmember = "checked";
 }
@@ -211,10 +221,24 @@ else if ($jenis_reg==16){
                                 </div>
                                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                     <div class="custom-control custom-radio">
+                                        <div id="bayar" style="font-size:16px;">
+                                            <label style="padding:-30px; font-size:20px">Status Bayar</label>
+                                            <br><input type="radio" class="custom-control-input" value="Lunas" name="bayar" <?php echo $lunas?>>
+                                            <label class="custom-control-label">Lunas</label>
+                                            <br><input type="radio" class="custom-control-input" value="" name="status" <?php echo $belumlunas?>>
+                                            <label class="custom-control-label">Belum Lunas</label></br>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="custom-control custom-radio">
                                         <div id="status" style="font-size:16px;">
                                             <label style="padding:-30px; font-size:20px">Status Keanggotaan</label>
-                                            <br><input type="radio" class="custom-control-input" value="Anggota" name="status" <?php echo $member?>>
-                                            <label class="custom-control-label">Anggota</label>
+                                            <br><input type="radio" class="custom-control-input" value="MAI" name="status" <?php echo $mai?>>
+                                            <label class="custom-control-label">MAI</label>
+                                            <br><input type="radio" class="custom-control-input" value="WAS" name="status" <?php echo $was?>>
+                                            <label class="custom-control-label">WAS</label>
                                             <br><input type="radio" class="custom-control-input" value="" name="status" <?php echo $nonmember?>>
                                             <label class="custom-control-label">Bukan Anggota</label></br>
                                             <br>
